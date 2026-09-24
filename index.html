@@ -812,6 +812,17 @@ h1 .accent { color: var(--accent); }
    <button>: it does something on click, so it has to be operable
    from the keyboard and announce itself as a control.
    ============================================================ */
+/* Sub-section label inside Selected work. Sits between the h2 and
+   its grid, so it is a heading, not a styled paragraph. */
+.pf-group {
+  margin: 0 0 clamp(18px, 2.4vh, 26px);
+  font-size: clamp(1rem, 1.5vw, 1.1875rem);
+  font-weight: 700;
+  letter-spacing: -.012em;
+  color: var(--fg);
+}
+.pf-group + .pf-grid { margin-bottom: clamp(44px, 6vh, 76px); }
+.pf-grid + .pf-group { margin-top: 0; }
 .pf-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(232px, 1fr));
@@ -1810,6 +1821,7 @@ h1 .accent { color: var(--accent); }
     <div class="section-head">
       <h2 data-inview>Selected work</h2>
     </div>
+    <h3 class="pf-group" data-inview>GoHighLevel &amp; Automation</h3>
     <ul class="pf-grid">
         <li class="pf-item" data-inview style="--delay:0ms">
           <button class="pf-card" type="button" data-project="ghl-lead-gen" aria-haspopup="dialog">
@@ -1856,6 +1868,33 @@ h1 .accent { color: var(--accent); }
               </picture>
             </span>
             <span class="pf-title">Meta Ads Lead Generation</span>
+          </button>
+        </li>
+    </ul>
+
+    <h3 class="pf-group" data-inview>Websites &amp; Landing Pages</h3>
+    <ul class="pf-grid">
+        <li class="pf-item" data-inview style="--delay:0ms">
+          <button class="pf-card" type="button" data-project="magician-site" aria-haspopup="dialog">
+            <span class="pf-media">
+              <picture>
+                <source srcset="projects/magician-site/thumb.webp" type="image/webp" />
+                <img src="projects/magician-site/thumb.jpg" alt="" loading="lazy" decoding="async" />
+              </picture>
+            </span>
+            <span class="pf-title">Magician Corporate Booking Website</span>
+          </button>
+        </li>
+
+        <li class="pf-item" data-inview style="--delay:70ms">
+          <button class="pf-card" type="button" data-project="home-hero-site" aria-haspopup="dialog">
+            <span class="pf-media">
+              <picture>
+                <source srcset="projects/home-hero-site/thumb.webp" type="image/webp" />
+                <img src="projects/home-hero-site/thumb.jpg" alt="" loading="lazy" decoding="async" />
+              </picture>
+            </span>
+            <span class="pf-title">Home Hero Maintenance</span>
           </button>
         </li>
     </ul>
@@ -2201,6 +2240,38 @@ h1 .accent { color: var(--accent); }
         <picture>
           <source srcset="projects/meta-ads/08.webp" type="image/webp" />
           <img src="projects/meta-ads/08.jpg" alt="" loading="lazy" decoding="async" />
+        </picture>
+        </div>
+      </div>
+    </article>
+
+    <article class="pf-detail" id="pd-magician-site">
+      <h3 class="pf-h">Magician Corporate Booking Website</h3>
+      <div class="pf-body">
+        <div class="pf-meta">
+        <p><b>My role.</b> (Fill in)</p>
+        <p><b>Project description.</b> (Fill in)</p>
+        </div>
+        <div class="pf-shots">
+        <picture>
+          <source srcset="projects/magician-site/01.webp" type="image/webp" />
+          <img src="projects/magician-site/01.jpg" alt="" loading="lazy" decoding="async" />
+        </picture>
+        </div>
+      </div>
+    </article>
+
+    <article class="pf-detail" id="pd-home-hero-site">
+      <h3 class="pf-h">Home Hero Maintenance</h3>
+      <div class="pf-body">
+        <div class="pf-meta">
+        <p><b>My role.</b> (Fill in)</p>
+        <p><b>Project description.</b> (Fill in)</p>
+        </div>
+        <div class="pf-shots">
+        <picture>
+          <source srcset="projects/home-hero-site/01.webp" type="image/webp" />
+          <img src="projects/home-hero-site/01.jpg" alt="" loading="lazy" decoding="async" />
         </picture>
         </div>
       </div>
