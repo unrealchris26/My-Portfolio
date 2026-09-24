@@ -1,0 +1,2481 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>GoHighLevel (GHL) Specialist | CRM, AI Automation &amp; Workflow Systems</title>
+<meta name="description" content="I help business owners set up, build, and manage their GoHighLevel systems - organizing the CRM, improving automations, and making sure leads are followed up on properly." />
+
+<!-- Favicons. Root-relative, matching the link-preview tags. -->
+<link rel="icon" href="/favicon.ico" sizes="any" />
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+
+<!-- ============================================================
+     LINK PREVIEW (Open Graph + X card)
+     What renders when the URL is pasted into Facebook, LinkedIn,
+     X, Slack, Discord, WhatsApp or iMessage.
+
+     Paths are root-relative so the site previews correctly on
+     whatever domain it is served from, with no URL to keep in
+     sync. og:url is deliberately absent: scrapers fall back to
+     the URL they fetched, which is always the right one.
+
+     og-image.jpg is a purpose-built 1200x630 card (the 1.91:1
+     ratio every platform crops to), rendered from __og-card.html
+     using the page's own tokens and type. JPEG, not WebP:
+     Facebook and LinkedIn do not render WebP previews and fall
+     back to no image at all.
+     ============================================================ -->
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Chris Portfolio" />
+<meta property="og:locale" content="en_US" />
+<meta property="og:title" content="GoHighLevel (GHL) Specialist | CRM, AI Automation &amp; Workflow Systems" />
+<meta property="og:description" content="I help business owners set up, build, and manage their GoHighLevel systems - organizing the CRM, improving automations, and making sure leads are followed up on properly." />
+<meta property="og:image" content="/og-image.jpg" />
+<meta property="og:image:type" content="image/jpeg" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:image:alt" content="Chris, GoHighLevel specialist" />
+
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="GoHighLevel (GHL) Specialist | CRM, AI Automation &amp; Workflow Systems" />
+<meta name="twitter:description" content="I help business owners set up, build, and manage their GoHighLevel systems - organizing the CRM, improving automations, and making sure leads are followed up on properly." />
+<meta name="twitter:image" content="/og-image.jpg" />
+<meta name="twitter:image:alt" content="Chris, GoHighLevel specialist" />
+
+<!-- Reveal styles are scoped to .js so the page is readable with scripting off. -->
+<script>document.documentElement.classList.add('js');</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link rel="preload" as="image" href="profile-600.webp" type="image/webp" fetchpriority="high" />
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+
+<style>
+/* ============================================================
+   TOKENS - Azure
+   The azure ramp and its semantic tokens are the source of
+   truth. The short names below are aliases onto them, so every
+   rule written against --bg / --fg / --accent keeps working.
+
+   Two values are not in the exported set and are derived here:
+   --border and the shadow scale. Shadows are neutral because
+   the surface ramp is: a blue-tinted shadow over a neutral
+   ground reads as a colour cast.
+
+   Depth has three steps, and they are not brightness-ordered:
+     --surface-page      the ground
+     --surface-elevated  panels that sit ON the ground (cards)
+     --surface-overlay   things that float ABOVE it (nav, ring)
+   In light mode elevated is darker than the page and overlay is
+   lighter. That is the system working, not a mistake.
+   ============================================================ */
+:root,
+:root[data-theme="light"] {
+  --azure-1: oklch(96% 0.019 247.5);
+  --azure-2: oklch(89% 0.0549 247.5);
+  --azure-3: oklch(80% 0.0997 247.5);
+  --azure-4: oklch(69% 0.1356 247.5);
+  --azure-5: oklch(62.5% 0.1387 247.5);
+  --azure-6: oklch(56% 0.1397 247.5);
+  --azure-7: oklch(48% 0.1267 247.5);
+  --azure-8: oklch(40.5% 0.1127 247.5);
+  --azure-9: oklch(30% 0.0848 247.5);
+
+  --surface-page: oklch(100% 0 247.5);
+  --surface-elevated: oklch(96.5% 0 247.5);
+  --surface-inset: oklch(94.5% 0 247.5);
+  --surface-overlay: oklch(100% 0 247.5);
+  --text-primary: oklch(16% 0 247.5);
+  --text-muted: oklch(45% 0 247.5);
+  --text-subtle: oklch(62% 0 247.5);
+  --accent: oklch(48% 0.127 247.5);
+  --accent-hover: oklch(56% 0.1397 247.5);
+  --accent-fill: oklch(48% 0.127 247.5);
+  --accent-fill-hover: oklch(56% 0.1397 247.5);
+  --accent-contrast: oklch(100% 0 0);
+  --accent-soft: oklch(69% 0.1356 247.5 / 0.12);
+  --accent-wash: oklch(96% 0.019 247.5);
+  --focus: oklch(69% 0.1356 247.5);
+  --info-bg: oklch(96% 0.0305 247.5);
+  --info-border: oklch(87% 0.08 247.5);
+  --info-fg: oklch(56% 0.1397 247.5);
+
+  /* derived */
+  --border: oklch(90% 0 247.5);
+  --shadow-nav:        0 1px 2px oklch(0% 0 0 / .05), 0 8px 24px oklch(0% 0 0 / .07);
+  --shadow-card:       0 1px 2px oklch(0% 0 0 / .04), 0 12px 32px oklch(0% 0 0 / .07);
+  --shadow-photo:      0 4px 10px oklch(0% 0 0 / .045), 0 22px 55px oklch(0% 0 0 / .125);
+  --shadow-photo-lift: 0 8px 18px oklch(0% 0 0 / .06), 0 46px 100px oklch(0% 0 0 / .2);
+  --shadow-ground:     oklch(0% 0 0 / .26);
+
+  /* aliases */
+  --bg:           var(--surface-page);
+  --bg-elevated:  var(--surface-elevated);
+  --bg-overlay:   var(--surface-overlay);
+  --bg-alt:       var(--surface-inset);
+  --fg:           var(--text-primary);
+  --fg-muted:     var(--text-muted);
+  --fg-subtle:    var(--text-subtle);
+  --on-accent:    var(--accent-contrast);
+  --tint:         var(--accent-soft);
+  --ring-1:       oklch(69% 0.1356 247.5 / 0.18);
+  --ring-2:       oklch(69% 0.1356 247.5 / 0.09);
+
+  /* Stack and wave are one material: soft neutral discs, not an
+     accent stroke. The wave is a sheet leaving the pile. */
+  --stack-fill: oklch(97% 0 247.5);
+  --stack-edge: oklch(91% 0 247.5);
+  --wave-peak:  .85;
+  --wave-line:  oklch(90% 0 247.5 / .95);
+  --wave-glow:  oklch(95.5% 0 247.5 / .9);
+
+  --r-surface:     20px;
+  --r-chip:        12px;
+  --r-tile:        8px;
+  --ease-out:      cubic-bezier(0.23, 1, 0.32, 1);
+  --nav-h:         56px;
+  --space-gutter:  clamp(16px, 5vw, 40px);
+}
+
+:root[data-theme="dark"] {
+  --surface-page: oklch(11% 0 247.5);
+  --surface-elevated: oklch(21% 0 247.5);
+  --surface-inset: oklch(8% 0 247.5);
+  --surface-overlay: oklch(24% 0 247.5);
+  --text-primary: oklch(97% 0 247.5);
+  --text-muted: oklch(72% 0 247.5);
+  --text-subtle: oklch(62% 0 247.5);
+  --accent: oklch(64% 0.1448 247.5);
+  --accent-hover: oklch(72% 0.1245 247.5);
+  --accent-fill: oklch(52% 0.1397 247.5);
+  --accent-fill-hover: oklch(56% 0.1346 247.5);
+  --accent-contrast: oklch(100% 0 0);
+  --accent-soft: oklch(69% 0.1356 247.5 / 0.18);
+  --accent-wash: oklch(21% 0.0318 247.5);
+  --focus: oklch(69% 0.1356 247.5);
+  --info-bg: oklch(22% 0.0508 247.5);
+  --info-border: oklch(35% 0.1016 247.5);
+  --info-fg: oklch(75% 0.1016 247.5);
+
+  /* derived */
+  --border: oklch(28% 0 247.5);
+  --shadow-nav:        0 1px 2px oklch(0% 0 0 / .5), 0 8px 24px oklch(0% 0 0 / .55);
+  --shadow-card:       0 1px 2px oklch(0% 0 0 / .5), 0 12px 32px oklch(0% 0 0 / .5);
+  --shadow-photo:      0 4px 10px oklch(0% 0 0 / .4), 0 22px 55px oklch(0% 0 0 / .6);
+  --shadow-photo-lift: 0 8px 18px oklch(0% 0 0 / .45), 0 46px 100px oklch(0% 0 0 / .75);
+  --shadow-ground:     oklch(0% 0 0 / .62);
+
+  --ring-1:       oklch(69% 0.1356 247.5 / 0.22);
+  --ring-2:       oklch(69% 0.1356 247.5 / 0.10);
+
+  --stack-fill: oklch(26% 0 247.5);
+  --stack-edge: oklch(33% 0 247.5);
+  --wave-peak:  .8;
+  --wave-line:  oklch(34% 0 247.5 / .95);
+  --wave-glow:  oklch(27% 0 247.5 / .9);
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+
+html { -webkit-text-size-adjust: 100%; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--fg);
+  font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  overflow-x: hidden;
+  /* Only the two properties that matter, never `all`. */
+  transition: background-color 320ms var(--ease-out), color 320ms var(--ease-out);
+}
+
+:focus-visible {
+  outline: 2px solid var(--focus);
+  outline-offset: 3px;
+  border-radius: 999px;
+}
+
+.skip-link {
+  position: absolute;
+  left: -9999px;
+  top: 12px;
+  z-index: 100;
+  padding: 10px 18px;
+  border-radius: 999px;
+  background: var(--accent-fill);
+  color: var(--on-accent);
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+}
+.skip-link:focus { left: var(--space-gutter); }
+
+/* ============================================================
+   NAV - floating pill, one line at desktop, 56px tall
+   ============================================================ */
+.nav-wrap {
+  position: fixed;
+  top: clamp(12px, 2.4vh, 22px);
+  left: 0;
+  right: 0;
+  z-index: 50;
+  display: flex;
+  justify-content: center;
+  padding-inline: var(--space-gutter);
+  pointer-events: none;
+}
+
+.nav {
+  pointer-events: auto;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  width: 100%;
+  max-width: 1040px;
+  height: var(--nav-h);
+  padding: 0 10px 0 18px;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  background: var(--bg-overlay);
+  box-shadow: var(--shadow-nav);
+  transition: background-color 320ms var(--ease-out), border-color 320ms var(--ease-out);
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  margin-right: auto;
+  color: var(--fg);
+  text-decoration: none;
+  white-space: nowrap;
+  /* The brand is the only flexible thing in the bar: it gives up
+     width so the actions never get pushed past the pill's edge.
+     min-width:0 is what lets a flex item shrink below its text. */
+  min-width: 0;
+}
+.brand-mark { flex: none; display: block; width: 26px; height: 26px; }
+.brand-text {
+  font-size: clamp(11px, 1.3vw, 13.5px);
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  white-space: nowrap;
+  /* Last-resort truncation. With the rules below it should never
+     be reached, but it guarantees the bar cannot overflow. */
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.brand-text b { font-weight: 800; }
+.brand-text > span { font-weight: 400; color: var(--fg-muted); margin-left: .4em; }
+
+/* Enters from the right, mark first and wordmark a beat behind,
+   landing just as the nav itself finishes settling. */
+@keyframes brand-in {
+  from { opacity: 0; transform: translateX(20px); }
+  to   { opacity: 1; transform: none; }
+}
+@media (prefers-reduced-motion: no-preference) {
+  .brand-mark { animation: brand-in 640ms var(--ease-out) 240ms both; }
+  .brand-text { animation: brand-in 640ms var(--ease-out) 350ms both; }
+}
+
+.nav-actions { display: flex; align-items: center; gap: 8px; flex: none; }
+
+/* Visible to screen readers only. Carries the "PDF, new tab"
+   warning without printing it in a 38px pill. */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+.pill-ico { width: 13px; height: 13px; flex: none; opacity: .65; }
+
+.pill {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  height: 38px;
+  padding: 0 20px;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  background: transparent;
+  color: var(--fg);
+  font: inherit;
+  font-size: 14px;
+  font-weight: 600;
+  white-space: nowrap;
+  text-decoration: none;
+  cursor: pointer;
+  transition: transform 160ms var(--ease-out),
+              background-color 200ms ease,
+              border-color 200ms ease,
+              color 200ms ease;
+}
+.pill--solid {
+  background: var(--accent-fill);
+  border-color: var(--accent-fill);
+  color: var(--on-accent);
+}
+@media (hover: hover) and (pointer: fine) {
+  .pill:hover        { background: var(--bg); border-color: var(--fg-subtle); }
+  .pill--solid:hover { background: var(--accent-fill-hover); border-color: var(--accent-fill-hover); }
+}
+.pill:active { transform: scale(0.97); }
+
+.theme-toggle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 38px;
+  flex: none;
+  padding: 0;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  background: transparent;
+  color: var(--fg-muted);
+  cursor: pointer;
+  transition: transform 160ms var(--ease-out), color 200ms ease, border-color 200ms ease;
+}
+@media (hover: hover) and (pointer: fine) {
+  .theme-toggle:hover { color: var(--fg); border-color: var(--fg-subtle); }
+}
+.theme-toggle:active { transform: scale(0.94); }
+.theme-toggle svg { width: 18px; height: 18px; display: block; }
+:root[data-theme="light"] .icon-moon { display: none; }
+:root[data-theme="dark"]  .icon-sun  { display: none; }
+
+/* ============================================================
+   HERO
+   dvh, never vh - the iOS address bar changes vh mid-scroll.
+   ============================================================ */
+.hero {
+  min-height: 100dvh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: clamp(18px, 3vh, 34px);
+  padding-block: calc(var(--nav-h) + 32px) clamp(32px, 5vh, 56px);
+  padding-inline: var(--space-gutter);
+  text-align: center;
+}
+
+/* ============================================================
+   PORTRAIT - three nested elements, one job each
+
+     .portrait         entrance reveal transform
+     .portrait-float   idle drift (CSS keyframes, runs forever)
+     .portrait-inner   pointer tilt / push / hover pop (rAF)
+
+   They have to be separate. Two transforms cannot share one
+   element - whichever is declared last simply wins, which is
+   how the tilt got silently cancelled in the first version.
+   ============================================================ */
+.portrait {
+  position: relative;
+  flex: none;
+  display: grid;
+  place-items: center;
+  width: clamp(260px, min(58vh, 46vw), 620px);
+  aspect-ratio: 1;
+}
+.portrait::before,
+.portrait::after {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  pointer-events: none;
+}
+.portrait::before { inset: -6%;  border: 1px solid var(--ring-2); }
+.portrait::after  { content: none; }
+
+/* Ground shadow. A separate blurred ellipse rather than a bigger
+   box-shadow, so the lift animates on opacity and transform. */
+.shadow-pad {
+  position: absolute;
+  left: 50%;
+  bottom: -3%;
+  width: 62%;
+  height: 11%;
+  border-radius: 50%;
+  background: radial-gradient(ellipse at center,
+              var(--shadow-ground), rgba(0, 0, 0, 0) 72%);
+  filter: blur(14px);
+  opacity: .5;
+  transform: translate(-50%, 0) scale(1);
+  transition: opacity 420ms var(--ease-out), transform 420ms var(--ease-out);
+  pointer-events: none;
+}
+
+/* Idle drift. Not a straight bob - the sideways component keeps
+   it from reading as a metronome. */
+@keyframes drift {
+  0%   { transform: translate3d(0,     -8px, 0); }
+  33%  { transform: translate3d(6px,    3px, 0); }
+  66%  { transform: translate3d(-6px,   7px, 0); }
+  100% { transform: translate3d(0,     -8px, 0); }
+}
+.portrait-float {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  place-items: center;
+  animation: drift 9s ease-in-out infinite;
+}
+
+/* The scroll fade gets its own element. It cannot share one
+   with the entrance, which already transitions opacity on
+   .portrait: an animation beats a transition outright, so the
+   fade-in on load would never be seen. */
+.portrait-veil {
+  position: relative;
+  display: grid;
+  place-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+/* Dips, springs back past the start, then leaves quickly. The
+   opacity holds while the bounce is legible and only collapses
+   at the end, so the exit reads as one movement. */
+@keyframes hero-veil {
+  0%   { opacity: 1;    transform: translateY(0)      scale(1); }
+  30%  { opacity: 1;    transform: translateY(10px)   scale(1.018); }
+  52%  { opacity: .97;  transform: translateY(-14px)  scale(.976); }
+  68%  { opacity: .78;  transform: translateY(-8px)   scale(.962); }
+  84%  { opacity: .28;  transform: translateY(-30px)  scale(.918); }
+  100% { opacity: 0;    transform: translateY(-52px)  scale(.87); }
+}
+
+/* Driven by the hero's own view progress, off the main thread.
+   Chromium today; elsewhere the JS below takes over. */
+@supports (animation-timeline: view()) {
+  .hero { view-timeline-name: --hero; view-timeline-axis: block; }
+
+  @media (prefers-reduced-motion: no-preference) {
+    .portrait-veil {
+      animation: hero-veil linear both;
+      animation-timeline: --hero;
+      /* Tighter window than before: begins almost at once and is
+         completely gone less than half way through the exit. */
+      animation-range: exit 4% exit 38%;
+    }
+  }
+}
+
+.portrait-inner {
+  position: relative;
+  display: grid;
+  place-items: center;
+  width: 100%;
+  height: 100%;
+  /* All five driven from rAF, so no CSS transition here. */
+  --tilt-x: 0deg;
+  --tilt-y: 0deg;
+  --push-x: 0px;
+  --push-y: 0px;
+  --pop: 1;
+  transform: perspective(1400px)
+             translate3d(var(--push-x), var(--push-y), 0)
+             rotateX(var(--tilt-x))
+             rotateY(var(--tilt-y))
+             scale(var(--pop));
+  will-change: transform;
+}
+
+/* The pile. Same-size discs nudged down and in, so only a
+   crescent of each shows below the portrait. Two is enough to
+   read as a stack; three starts to look like a target. */
+.disc-stack {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+}
+.disc-stack i {
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  background: var(--stack-fill);
+  border: 1px solid var(--stack-edge);
+  transition: background-color 320ms var(--ease-out), border-color 320ms var(--ease-out);
+}
+.disc-stack i:nth-child(1) { transform: translateY(11px) scale(.988); }
+.disc-stack i:nth-child(2) { transform: translateY(22px) scale(.97); opacity: .72; }
+
+/* Shockwaves, behind the photo so they emerge from under the
+   pile. Only transform and opacity are ever animated. */
+.ripples {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  display: grid;
+  place-items: center;
+  pointer-events: none;
+}
+.ripple {
+  grid-area: 1 / 1;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  /* Reads as the rim of a disc rather than a drawn circle: a
+     soft fill that stops short of the edge, capped by a hairline. */
+  border: 1px solid var(--wave-line);
+  background: radial-gradient(circle at center,
+              transparent 63%, var(--wave-glow) 79%, transparent 97%);
+  opacity: 0;
+}
+
+.portrait picture { display: contents; }
+
+.portrait img {
+  grid-area: 1 / 1;
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+  /* Thicker rim, matching the reference proportion. */
+  border: 9px solid var(--bg-overlay);
+  box-shadow: var(--shadow-photo);
+  transition: box-shadow 420ms var(--ease-out), border-color 320ms var(--ease-out);
+}
+
+/* Lifted state, set from JS on pointerenter. */
+.portrait.is-lifted .shadow-pad {
+  opacity: .82;
+  transform: translate(-50%, 14px) scale(1.22);
+}
+.portrait.is-lifted img { box-shadow: var(--shadow-photo-lift); }
+
+@media (hover: hover) and (pointer: fine) {
+  .portrait-inner { cursor: pointer; }
+}
+
+/* ============================================================
+   COPY
+   The headline and the paragraph each get their own measure.
+   ============================================================ */
+.hero-copy {
+  width: 100%;
+  max-width: 1040px;
+}
+
+/* The qualifier sits under the claim at a step down, rather than
+   running on as one 70-character headline. */
+.h1-tag {
+  display: block;
+  margin-top: .34em;
+  font-size: clamp(1rem, 1.9vw, 1.375rem);
+  font-weight: 700;
+  letter-spacing: -.015em;
+  line-height: 1.25;
+  color: var(--accent);
+}
+h1 {
+  margin: 0 auto;
+  max-width: 22ch;
+  font-size: clamp(2.125rem, 5.2vw, 3.75rem);
+  font-weight: 700;
+  line-height: 1.06;
+  letter-spacing: -0.035em;
+  text-wrap: balance;
+}
+h1 .accent { color: var(--accent); }
+
+.sub {
+  margin: clamp(14px, 2vh, 20px) auto 0;
+  max-width: 56ch;
+  font-size: clamp(1rem, 1.5vw, 1.1875rem);
+  font-weight: 400;
+  line-height: 1.55;
+  color: var(--fg-muted);
+  text-wrap: pretty;
+}
+
+.hero-cta { margin-top: clamp(20px, 2.8vh, 30px); }
+
+/* Scroll cue. Hit area is 48px so it is reachable on a phone;
+   the mark inside stays small. */
+.scroll-cue {
+  display: inline-grid;
+  place-items: center;
+  width: 54px;
+  height: 54px;
+  border-radius: 999px;
+  /* The page accent, stated outright rather than inherited. */
+  color: var(--accent);
+  transition: color 200ms ease, background-color 200ms ease;
+}
+.scroll-cue svg { width: 33px; height: 33px; display: block; }
+@media (hover: hover) and (pointer: fine) {
+  .scroll-cue:hover { color: var(--accent-hover); background: var(--accent-soft); }
+}
+
+/* A cue that never moves is just a glyph. Kept small and slow. */
+@keyframes cue-nudge {
+  0%, 62%, 100% { transform: translateY(0); }
+  78%           { transform: translateY(5px); }
+}
+@media (prefers-reduced-motion: no-preference) {
+  .scroll-cue svg { animation: cue-nudge 2.6s var(--ease-out) infinite; }
+}
+
+/* Anchor jumps glide rather than teleport. */
+@media (prefers-reduced-motion: no-preference) {
+  html { scroll-behavior: smooth; }
+}
+
+/* ============================================================
+   SHARED SECTION FURNITURE
+   ============================================================ */
+.section { padding-block: clamp(80px, 14vh, 150px); padding-inline: var(--space-gutter); }
+.section-inner { width: 100%; max-width: 1120px; margin-inline: auto; }
+.section-head { margin-bottom: clamp(36px, 6vh, 60px); }
+.eyebrow {
+  margin: 0 0 14px;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: .16em;
+  text-transform: uppercase;
+  /* The page accent. Not brightened further: at 12px it has to
+     clear 4.5:1, and the lighter rungs of the ramp do not. */
+  color: var(--accent);
+}
+.section-head h2 {
+  margin: 0;
+  font-size: clamp(1.875rem, 4vw, 2.875rem);
+  font-weight: 700;
+  line-height: 1.1;
+  letter-spacing: -0.03em;
+}
+.section-head p {
+  margin: 14px 0 0;
+  max-width: 52ch;
+  font-size: clamp(.9375rem, 1.3vw, 1.0625rem);
+  line-height: 1.55;
+  color: var(--fg-muted);
+}
+
+/* ============================================================
+   SKILLS AND TOOLS
+   Four groups, three tools each. Centred head, unlike the other
+   sections, because the reference centres it.
+   ============================================================ */
+.section-head--center { text-align: center; }
+.section-head--center p { margin-inline: auto; }
+
+.kit-grid {
+  display: grid;
+  /* Six cards: three columns fill two clean rows. Four would leave
+     a two-card orphan row hanging under a full one. */
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: clamp(14px, 1.6vw, 20px);
+  align-items: start;
+}
+.kit-card {
+  /* All three driven from rAF; no transition on transform or it
+     would fight the loop for the same property. */
+  --kx: 0deg;
+  --ky: 0deg;
+  --klift: 0px;
+  padding: clamp(18px, 2vw, 24px);
+  border: 1px solid var(--border);
+  border-radius: var(--r-surface);
+  background: var(--bg-elevated);
+  box-shadow: var(--shadow-card);
+  transform: perspective(900px)
+             translate3d(0, var(--klift), 0)
+             rotateX(var(--kx))
+             rotateY(var(--ky));
+  transform-style: preserve-3d;
+  transition: box-shadow 260ms var(--ease-out),
+              border-color 320ms var(--ease-out),
+              background-color 320ms var(--ease-out);
+}
+@media (hover: hover) and (pointer: fine) {
+  .kit-card:hover { box-shadow: var(--shadow-photo-lift); }
+  /* preserve-3d on the card means translateZ reads as real depth:
+     the row lifts off the face of the card, not just up the page. */
+  .kit-item:hover {
+    transform: translateZ(20px) scale(1.055);
+    border-color: var(--accent);
+    z-index: 2;
+  }
+  .kit-item:hover .kit-tile { transform: scale(1.12); }
+}
+.kit-card h3 {
+  margin: 0 0 3px;
+  font-size: clamp(1rem, 1.4vw, 1.0938rem);
+  font-weight: 700;
+  letter-spacing: -0.015em;
+}
+.kit-note {
+  margin: 0 0 18px;
+  font-size: 13px;
+  color: var(--fg-muted);
+}
+.kit-list { display: grid; gap: 10px; margin: 0; padding: 0; list-style: none; }
+.kit-item {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  padding: 9px 12px;
+  border: 1px solid var(--border);
+  border-radius: var(--r-chip);
+  background: var(--bg-overlay);
+  font-size: 13.5px;
+  font-weight: 600;
+  color: var(--fg);
+  position: relative;
+  transform: translateZ(0);
+  transition: transform 280ms var(--ease-out),
+              border-color 200ms ease,
+              box-shadow 280ms var(--ease-out),
+              background-color 320ms var(--ease-out);
+}
+
+.kit-tile {
+  transition: transform 280ms var(--ease-out);
+  display: grid;
+  place-items: center;
+  width: 28px;
+  height: 28px;
+  flex: none;
+  border-radius: var(--r-tile);
+  background: var(--bg-alt);
+  color: var(--b, var(--fg));
+}
+:root[data-theme="dark"] .kit-tile { color: var(--bd, var(--b, var(--fg))); }
+.kit-tile--plain { background: none; }
+.kit-tile--mono {
+  background: var(--accent-soft);
+  color: var(--accent);
+  font-size: 12.5px;
+  font-weight: 800;
+}
+/* Three glyphs where the others carry one or two. */
+.kit-tile--code { font-size: 10px; letter-spacing: -.04em; }
+/* Raster brand marks, in two modes. An app icon carries its own
+   ground, so it fills the tile and the tile drops its background;
+   a bare mark sits on the tile like the inline SVG logos do. */
+.kit-tile--img { background: none; overflow: hidden; }
+.kit-tile--img img { width: 100%; height: 100%; object-fit: contain; display: block; }
+.kit-tile--mark img { width: 17px; height: 17px; object-fit: contain; display: block; }
+.kit-logo { width: 17px; height: 17px; display: block; }
+
+@media (max-width: 980px) { .kit-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 520px) { .kit-grid { grid-template-columns: 1fr; } }
+
+/* ============================================================
+   SELECTED WORK
+   Media panel on top, caption underneath and outside it. The
+   reference never stamps type over the image, which is why the
+   thumbnails stay readable at any size.
+   ============================================================ */
+.sw-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  column-gap: clamp(20px, 3vw, 40px);
+  row-gap: clamp(34px, 5vh, 60px);
+}
+.sw-item { margin: 0; }
+
+.sw-media {
+  position: relative;
+  display: grid;
+  place-items: center;
+  aspect-ratio: 16 / 10;
+  border-radius: var(--r-surface);
+  overflow: hidden;
+  border: 1px solid var(--border);
+  transition: transform 420ms var(--ease-out), box-shadow 420ms var(--ease-out),
+              border-color 320ms var(--ease-out);
+}
+.sw-media img { width: 100%; height: 100%; object-fit: cover; display: block; }
+
+/* Four soft washes, all drawn from the azure ramp so the set
+   still reads as one palette rather than four moods. */
+.sw-a { background: linear-gradient(145deg, var(--azure-1), var(--surface-page) 62%, var(--azure-2)); }
+.sw-b { background: linear-gradient(200deg, var(--surface-page), var(--azure-1) 55%, var(--azure-3)); }
+.sw-c { background: linear-gradient(125deg, var(--azure-2), var(--surface-page) 58%, var(--azure-1)); }
+.sw-d { background: linear-gradient(165deg, var(--azure-1), var(--azure-2) 48%, var(--surface-page)); }
+
+:root[data-theme="dark"] .sw-a { background: linear-gradient(145deg, var(--azure-9), var(--surface-elevated) 64%, var(--azure-8)); }
+:root[data-theme="dark"] .sw-b { background: linear-gradient(200deg, var(--surface-elevated), var(--azure-9) 55%, var(--azure-7)); }
+:root[data-theme="dark"] .sw-c { background: linear-gradient(125deg, var(--azure-8), var(--surface-elevated) 58%, var(--azure-9)); }
+:root[data-theme="dark"] .sw-d { background: linear-gradient(165deg, var(--azure-9), var(--azure-8) 48%, var(--surface-elevated)); }
+
+@media (hover: hover) and (pointer: fine) {
+  .sw-item:hover .sw-media {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-photo-lift);
+  }
+}
+
+.sw-meta { margin-top: 16px; }
+/* The mark sits with the company name, not above the caption, so
+   the eye picks up brand and title in one move. */
+.sw-title { display: flex; align-items: center; gap: 9px; margin-bottom: 3px; }
+.sw-logo {
+  flex: none;
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  object-fit: cover;
+  display: block;
+  background: #fff;
+  border: 1px solid var(--border);
+}
+.sw-meta h3 {
+  margin: 0;
+  font-size: clamp(1rem, 1.4vw, 1.0938rem);
+  font-weight: 700;
+  letter-spacing: -0.015em;
+}
+.sw-meta p { margin: 0; font-size: 14px; line-height: 1.5; color: var(--fg-muted); }
+
+
+@media (max-width: 700px) { .sw-grid { grid-template-columns: 1fr; } }
+
+/* ============================================================
+   ENTRANCE MOTION
+   Purpose: establish reading order (nav, face, claim, proof,
+   action). Seen once per visit, so it can afford 520ms.
+   Never scale(0) - nothing in the world appears from nothing.
+   ============================================================ */
+.js [data-reveal] {
+  opacity: 0;
+  transform: translateY(18px);
+  transition: opacity 520ms var(--ease-out), transform 520ms var(--ease-out);
+  transition-delay: var(--delay, 0ms);
+}
+.js [data-reveal="nav"]      { transform: translateY(-14px); }
+.js [data-reveal="portrait"] { transform: translateY(16px) scale(0.94); }
+
+:root.is-ready [data-reveal] {
+  opacity: 1;
+  transform: none;
+}
+
+/* Scroll reveal for anything below the fold. IntersectionObserver,
+   never a scroll listener - that fires on every frame. */
+.js [data-inview] {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 620ms var(--ease-out), transform 620ms var(--ease-out);
+  transition-delay: var(--delay, 0ms);
+}
+.js [data-inview].is-inview {
+  opacity: 1;
+  transform: none;
+}
+
+/* ============================================================
+   REDUCED MOTION
+   Fewer and gentler, not zero. Opacity survives, movement does not.
+   ============================================================ */
+@media (prefers-reduced-motion: reduce) {
+  [data-reveal] {
+    transform: none !important;
+    transition: opacity 200ms ease;
+    transition-delay: 0ms;
+  }
+  .pill:active, .theme-toggle:active { transform: none; }
+  .portrait-float { animation: none; }
+  .portrait-inner { transform: none !important; }
+  .ripples { display: none; }
+  .kit-card { transform: none !important; }
+  .sw-item:hover .sw-media { transform: none; }
+  .kit-item:hover { transform: none; }
+  .kit-item:hover .kit-tile { transform: none; }
+  /* The pile is structure, not motion, so it stays. */
+  .shadow-pad { transition: opacity 200ms ease; }
+  .tools-track { animation: none; display: block; width: 100%; }
+  .tools { flex-wrap: wrap; padding-right: 0; }
+  .tools[aria-hidden="true"] { display: none; }
+  .tools-wrap { -webkit-mask-image: none; mask-image: none; }
+  .tool:hover { transform: none; }
+  .portrait.is-lifted .shadow-pad { transform: translate(-50%, 0) scale(1); }
+}
+
+/* ============================================================
+   RESPONSIVE
+   ============================================================ */
+@media (max-width: 760px) {
+  .portrait { width: clamp(230px, 68vw, 400px); }
+  h1 { max-width: 16ch; }
+}
+@media (max-width: 560px) {
+  .nav { padding-inline: 14px 8px; gap: 8px; }
+  .pill { height: 36px; padding: 0 15px; font-size: 13px; }
+  .theme-toggle { width: 36px; height: 36px; }
+  .brand-text { font-size: 12px; letter-spacing: .08em; }
+  .hero-cta .pill { height: 46px; padding: 0 26px; }
+
+  /* Brand + three actions cannot fit a phone without the primary
+     button losing its edge. Resume is the one that goes: it is the
+     secondary action, and the same link sits in the footer CTA. */
+  .nav-actions .pill--ghost { display: none; }
+}
+@media (max-width: 400px) {
+  /* Below this the wordmark alone still fits; the qualifier does
+     not. Dropping it beats truncating "PORTFOLIO" mid-word. */
+  .brand-text > span { display: none; }
+}
+
+/* ============================================================
+   METHOD
+   The laptop is a real 3D object, not a picture of one: a lid
+   that hinges and a body that turns needs depth a flat SVG
+   cannot give. Scroll drives a single --p from 0 to 1 and every
+   part reads from it, so forward and backward are the same
+   animation played in opposite directions.
+   ============================================================ */
+@property --p {
+  syntax: '<number>';
+  inherits: true;
+  initial-value: 0;
+}
+
+.method-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: clamp(32px, 5vw, 72px);
+  align-items: center;
+}
+
+.method-tag {
+  margin: 0 0 14px;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--fg-subtle);
+}
+.method-copy h2 {
+  margin: 0 0 clamp(36px, 6vh, 64px);
+  font-size: clamp(1.875rem, 4vw, 2.875rem);
+  font-weight: 700;
+  line-height: 1.1;
+  letter-spacing: -0.03em;
+}
+
+.steps { margin: 0; padding: 0; list-style: none; display: grid; gap: clamp(22px, 3.4vh, 34px); }
+.step { display: grid; grid-template-columns: auto minmax(0, 1fr); gap: 14px; align-items: baseline; }
+.step-n {
+  font-size: clamp(1.0625rem, 1.5vw, 1.25rem);
+  font-weight: 500;
+  color: var(--fg-subtle);
+  font-variant-numeric: tabular-nums;
+}
+.step h3 {
+  margin: 0 0 5px;
+  font-size: clamp(1.0625rem, 1.6vw, 1.3125rem);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  line-height: 1.2;
+}
+.step p { margin: 0; font-size: 14.5px; line-height: 1.55; color: var(--fg-muted); }
+
+/* ---- the machine, built as two cuboids -------------------------
+   Every dimension derives from --W so one value resizes the whole
+   thing. The camera looks down 26deg: at the 14deg it had before,
+   a horizontal deck projects to a few pixels and the whole object
+   reads flat no matter how correct the maths is.
+------------------------------------------------------------------ */
+.lap-stage {
+  --W: 330px;
+  --H: calc(var(--W) * .625);
+  --T: calc(var(--W) * .021);
+  --D: calc(var(--H) * .74);
+  --DT: calc(var(--W) * .030);
+  position: relative;
+  perspective: 1500px;
+  perspective-origin: 50% 42%;
+  display: grid;
+  place-items: center;
+  min-height: calc(var(--H) * 1.9);
+}
+
+.lap-shadow {
+  position: absolute;
+  left: 50%;
+  top: 62%;
+  width: calc(var(--W) * 1.05);
+  height: calc(var(--W) * .18);
+  border-radius: 50%;
+  background: radial-gradient(ellipse at center, var(--shadow-ground), transparent 72%);
+  filter: blur(16px);
+  opacity: calc(.35 + var(--p) * .2);
+  transform: translate(-50%, -50%) scale(calc(1 - var(--p) * .12));
+  pointer-events: none;
+}
+
+.lap {
+  position: relative;
+  width: var(--W);
+  height: var(--H);
+  transform-style: preserve-3d;
+  transform: rotateX(26deg) rotateY(calc(-30deg + var(--p) * 360deg));
+}
+
+.fc {
+  position: absolute;
+  display: block;
+  backface-visibility: hidden;
+}
+
+/* ---- lid: a W x H x T slab hinged at its bottom edge ---- */
+.lid {
+  position: absolute;
+  inset: 0;
+  transform-style: preserve-3d;
+  transform-origin: bottom center;
+  /* reclined a touch when open, flat on the deck when shut */
+  transform: rotateX(calc(8deg - var(--p) * 98deg));
+}
+.lid-front, .lid-back { inset: 0; border-radius: calc(var(--W) * .022); }
+.lid-front {
+  transform: translateZ(calc(var(--T) / 2));
+  background: linear-gradient(160deg, var(--azure-8), var(--azure-9));
+  padding: calc(var(--W) * .026);
+}
+.lid-back {
+  transform: translateZ(calc(var(--T) / -2)) rotateY(180deg);
+  background: linear-gradient(200deg, var(--azure-7), var(--azure-9) 70%);
+}
+.lid-l, .lid-r { top: 0; height: 100%; width: var(--T); left: calc(50% - var(--T) / 2); }
+.lid-l { transform: rotateY(-90deg) translateZ(calc(var(--W) / 2)); background: var(--azure-9); }
+.lid-r { transform: rotateY(90deg)  translateZ(calc(var(--W) / 2)); background: var(--azure-8); }
+.lid-t, .lid-b { left: 0; width: 100%; height: var(--T); top: calc(50% - var(--T) / 2); }
+.lid-t { transform: rotateX(90deg)  translateZ(calc(var(--H) / 2)); background: var(--azure-8); }
+.lid-b { transform: rotateX(-90deg) translateZ(calc(var(--H) / 2)); background: var(--azure-9); }
+
+.screen {
+  display: grid;
+  align-content: start;
+  gap: calc(var(--W) * .021);
+  width: 100%;
+  height: 100%;
+  padding: calc(var(--W) * .045) calc(var(--W) * .04);
+  border-radius: calc(var(--W) * .012);
+  background:
+    linear-gradient(150deg, oklch(100% 0 0 / .1), transparent 45%),
+    var(--surface-page);
+}
+.screen i { display: block; height: calc(var(--W) * .016); width: var(--w); border-radius: 99px; background: var(--azure-2); }
+.screen i:nth-child(3n) { background: var(--azure-3); }
+
+/* ---- deck: a W x D x DT slab lying flat off the same hinge ---- */
+.deck {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  height: var(--D);
+  transform-style: preserve-3d;
+  transform-origin: top center;
+  transform: rotateX(-90deg);
+}
+.deck-top, .deck-bot { inset: 0; border-radius: 0 0 calc(var(--W) * .03) calc(var(--W) * .03); }
+.deck-top {
+  transform: translateZ(calc(var(--DT) / 2));
+  background: linear-gradient(180deg, var(--azure-8), var(--azure-9));
+  display: grid;
+  gap: 6%;
+  justify-items: center;
+  align-content: start;
+  padding: 8% 7% 5%;
+}
+.deck-bot {
+  transform: translateZ(calc(var(--DT) / -2)) rotateY(180deg);
+  background: var(--azure-9);
+}
+.deck-l, .deck-r { top: 0; height: 100%; width: var(--DT); left: calc(50% - var(--DT) / 2); }
+.deck-l { transform: rotateY(-90deg) translateZ(calc(var(--W) / 2)); background: var(--azure-9); }
+.deck-r { transform: rotateY(90deg)  translateZ(calc(var(--W) / 2)); background: var(--azure-8); }
+.deck-back, .deck-front { left: 0; width: 100%; height: var(--DT); top: calc(50% - var(--DT) / 2); }
+.deck-back  { transform: rotateX(90deg)  translateZ(calc(var(--D) / 2)); background: var(--azure-9); }
+.deck-front { transform: rotateX(-90deg) translateZ(calc(var(--D) / 2)); background: var(--azure-7); }
+
+.keys { width: 100%; display: grid; grid-template-columns: repeat(15, 1fr); gap: calc(var(--W) * .006); }
+.keys i {
+  display: block;
+  aspect-ratio: 1;
+  border-radius: calc(var(--W) * .004);
+  background: var(--azure-4);
+  opacity: .16;
+}
+.pad {
+  display: block;
+  width: 32%;
+  aspect-ratio: 5 / 3;
+  border-radius: calc(var(--W) * .008);
+  background: var(--azure-7);
+  opacity: .5;
+}
+
+@keyframes key-lit {
+  0%, 84%, 100% { opacity: .16; }
+  88%           { opacity: .95; }
+}
+@media (prefers-reduced-motion: no-preference) {
+  .is-typing .keys i { animation: key-lit var(--kd) linear infinite; animation-delay: var(--ke); }
+}
+
+@keyframes method-drive { to { --p: 1; } }
+@supports (animation-timeline: view()) {
+  @media (prefers-reduced-motion: no-preference) {
+    .lap-stage {
+      animation: method-drive linear both;
+      animation-timeline: view();
+      animation-range: entry 45% cover 82%;
+    }
+  }
+}
+
+@media (max-width: 1100px) { .lap-stage { --W: 280px; } }
+@media (max-width: 860px)  { .lap-stage { --W: 320px; } }
+@media (max-width: 460px)  { .lap-stage { --W: 240px; } }
+
+@media (prefers-reduced-motion: reduce) {
+  .lap { transform: rotateX(26deg) rotateY(-30deg); }
+  .lid { transform: rotateX(8deg); }
+}
+
+@media (max-width: 860px) {
+  .method-grid { grid-template-columns: 1fr; gap: 40px; }
+  .lap-stage { order: -1; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .lap { transform: rotateX(14deg) rotateY(-22deg); }
+  .lid { transform: none; }
+}
+
+/* ============================================================
+   EXPERIENCE
+   A timeline, not a grid: the rail and the markers carry the
+   chronology so the dates do not have to shout it. The rail is
+   drawn as one segment per entry, each running from its own
+   marker to the next, so the line ends on the last marker
+   instead of trailing past it.
+   ============================================================ */
+.xp-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  max-width: 760px;
+}
+.xp-row:not(:last-child)::before {
+  content: "";
+  position: absolute;
+  left: 25px;          /* half of the 52px marker, less the 1px rail */
+  top: 26px;           /* the marker's centre line */
+  height: 100%;        /* +26px past the row = the next marker's centre */
+  width: 2px;
+  background: var(--border);
+}
+.xp-row {
+  position: relative;
+  display: grid;
+  grid-template-columns: 52px minmax(0, 1fr);
+  gap: 22px;
+  padding-bottom: clamp(34px, 5vh, 52px);
+}
+.xp-row:last-child { padding-bottom: 0; }
+
+.xp-mark {
+  position: relative;
+  z-index: 1;
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  font-size: 15px;
+  font-weight: 800;
+  letter-spacing: .02em;
+  overflow: hidden;
+  background: #fff;
+  border: 1px solid var(--border);
+  /* The ring masks the rail where it passes behind the marker, so
+     it matches the page colour and not the marker's. */
+  box-shadow: 0 0 0 5px var(--bg), 0 4px 12px oklch(0% 0 0 / .12);
+}
+/* The logo files are already square and white-backed, so they fill
+   the circle rather than floating in it. */
+.xp-mark img { width: 100%; height: 100%; object-fit: cover; display: block; }
+
+.xp-body { padding-top: 4px; min-width: 0; }
+.xp-body h3 {
+  margin: 0 0 5px;
+  font-size: clamp(1.0625rem, 1.7vw, 1.3125rem);
+  font-weight: 800;
+  letter-spacing: -.015em;
+  line-height: 1.25;
+}
+/* The role continues the company line rather than heading its
+   own, so it drops a weight instead of a size. */
+.xp-body h3 span { font-weight: 600; color: var(--fg-muted); }
+.xp-meta {
+  margin: 0 0 14px;
+  font-size: 13.5px;
+  font-weight: 500;
+  color: var(--fg-subtle);
+  font-variant-numeric: tabular-nums;
+}
+.xp-points { margin: 0; padding: 0 0 0 19px; display: grid; gap: 9px; }
+.xp-points li {
+  font-size: clamp(.9375rem, 1.25vw, 1rem);
+  line-height: 1.62;
+  color: var(--fg-muted);
+}
+.xp-points li::marker { color: var(--fg-subtle); }
+.xp-points b { font-weight: 700; color: var(--fg); }
+
+@media (max-width: 560px) {
+  .xp-row:not(:last-child)::before { left: 21px; }
+  .xp-row { grid-template-columns: 44px minmax(0, 1fr); gap: 16px; }
+  .xp-mark { width: 44px; height: 44px; font-size: 13px;
+             box-shadow: 0 0 0 4px var(--bg), 0 4px 12px oklch(0% 0 0 / .12); }
+  .xp-points { padding-left: 17px; }
+}
+
+/* ============================================================
+   WORK HISTORY
+   The source is a marketplace profile panel. The structure is
+   kept exactly - insight line, badge, tabs, then one row per job
+   with rating, dates and any review - but it is set in the page's
+   own type and colour so it reads as part of the site rather
+   than a screenshot pasted into it.
+   ============================================================ */
+.wh-insight { margin: 0 0 14px; font-size: 15px; color: var(--fg-muted); }
+
+.wh-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 5px 12px;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--fg-muted);
+}
+.wh-chip b { font-weight: 700; color: var(--fg-subtle); }
+.wh-chip--solid { background: var(--bg-alt); border-color: transparent; }
+
+.wh-tabs {
+  display: flex;
+  gap: 28px;
+  margin: 26px 0 0;
+  border-bottom: 1px solid var(--border);
+}
+.wh-tab {
+  position: relative;
+  padding: 0 0 12px;
+  border: 0;
+  background: none;
+  font: inherit;
+  font-size: 15.5px;
+  font-weight: 600;
+  color: var(--fg-subtle);
+  cursor: pointer;
+  transition: color 180ms ease;
+}
+.wh-tab:hover { color: var(--fg-muted); }
+.wh-tab[aria-selected="true"] { color: var(--fg); }
+/* Sits on the container's border, not under it. */
+.wh-tab[aria-selected="true"]::after {
+  content: "";
+  position: absolute;
+  left: 0; right: 0; bottom: -1px;
+  height: 2px;
+  background: var(--fg);
+}
+
+.wh-list { list-style: none; margin: 0; padding: 0; }
+.wh-job { padding: 26px 0; border-bottom: 1px solid var(--border); }
+.wh-job:last-child { border-bottom: 0; padding-bottom: 0; }
+.wh-title {
+  margin: 0;
+  font-size: clamp(1rem, 1.45vw, 1.125rem);
+  font-weight: 700;
+  letter-spacing: -.012em;
+  line-height: 1.35;
+}
+.wh-meta {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 4px 10px;
+  margin-top: 9px;
+  font-size: 13.5px;
+  color: var(--fg-muted);
+  font-variant-numeric: tabular-nums;
+}
+.wh-score { font-weight: 700; color: var(--fg); }
+.wh-sep { color: var(--border); }
+.wh-quote {
+  margin: 15px 0 0;
+  font-size: 14.5px;
+  font-style: italic;
+  line-height: 1.6;
+  color: var(--fg-muted);
+}
+.wh-endorse { margin: 13px 0 9px; font-size: 13px; color: var(--fg-subtle); }
+/* A second review on the same contract, indented under the first. */
+.wh-sub {
+  margin-top: 13px;
+  padding-left: 16px;
+  border-left: 2px solid var(--border);
+}
+.wh-empty { margin: 26px 0 0; font-size: 15px; color: var(--fg-muted); }
+
+/* Five stars painted once and filled to the score, so a half star
+   needs no second glyph. The mask clips both layers together. */
+.stars {
+  --size: 15px;
+  --star: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M12 .587l3.668 7.431 8.332 1.209-6.001 5.848 1.416 8.259L12 19.446l-7.415 3.888 1.416-8.259L0 9.227l8.332-1.209z'/%3E%3C/svg%3E");
+  position: relative;
+  display: inline-block;
+  flex: none;
+  width: calc(var(--size) * 5);
+  height: var(--size);
+  vertical-align: -2px;
+  background: var(--border);
+  -webkit-mask-image: var(--star);
+          mask-image: var(--star);
+  -webkit-mask-size: var(--size) var(--size);
+          mask-size: var(--size) var(--size);
+  -webkit-mask-repeat: repeat-x;
+          mask-repeat: repeat-x;
+}
+.stars i {
+  position: absolute;
+  inset: 0 auto 0 0;
+  width: calc(var(--rating) / 5 * 100%);
+  background: #F5A623;
+}
+
+@media (max-width: 560px) {
+  .wh-tabs { gap: 20px; }
+  .wh-tab { font-size: 14.5px; }
+}
+
+/* ============================================================
+   BEYOND
+   Copy left, picture right, three times over. The source photos
+   are portrait, so the frame is 4:5 and the column is capped:
+   dropping them into the reference's landscape panel would have
+   cropped away heads and feet.
+   ============================================================ */
+.bd-list { display: grid; gap: clamp(48px, 9vh, 104px); }
+
+.bd-row {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 460px);
+  gap: clamp(28px, 5vw, 72px);
+  align-items: center;
+}
+
+.bd-copy h3 {
+  display: flex;
+  align-items: baseline;
+  gap: 14px;
+  margin: 0 0 12px;
+  font-size: clamp(1.25rem, 2.2vw, 1.75rem);
+  font-weight: 700;
+  letter-spacing: -0.025em;
+  line-height: 1.15;
+}
+.bd-n {
+  font-weight: 500;
+  color: var(--fg-subtle);
+  font-variant-numeric: tabular-nums;
+}
+.bd-copy p {
+  margin: 0;
+  max-width: 46ch;
+  font-size: clamp(.9375rem, 1.25vw, 1.0625rem);
+  line-height: 1.65;
+  color: var(--fg-muted);
+  text-wrap: pretty;
+}
+
+.bd-media {
+  overflow: hidden;
+  border-radius: var(--r-surface);
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow-card);
+  aspect-ratio: 4 / 5;
+  transition: transform 420ms var(--ease-out), box-shadow 420ms var(--ease-out);
+}
+.bd-media img { width: 100%; height: 100%; object-fit: cover; display: block; }
+
+@media (hover: hover) and (pointer: fine) {
+  .bd-row:hover .bd-media { transform: translateY(-4px); box-shadow: var(--shadow-photo-lift); }
+}
+
+@media (max-width: 820px) {
+  .bd-row { grid-template-columns: 1fr; gap: 22px; }
+  .bd-media { max-width: 420px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .bd-row:hover .bd-media { transform: none; }
+}
+
+/* ============================================================
+   FOOTER
+   Carries id="contact", so the nav's Book a call resolves here
+   instead of pointing at a section that no longer exists.
+   ============================================================ */
+.footer {
+  padding-inline: var(--space-gutter);
+  padding-block: clamp(80px, 15vh, 160px) 26px;
+  border-top: 1px solid var(--border);
+  background: var(--bg-alt);
+  transition: background-color 320ms var(--ease-out), border-color 320ms var(--ease-out);
+}
+
+.footer-cta { text-align: center; }
+.footer-cta h2 {
+  margin: 0;
+  font-size: clamp(2rem, 5vw, 3.25rem);
+  font-weight: 700;
+  line-height: 1.05;
+  letter-spacing: -0.035em;
+}
+.footer-actions {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: clamp(24px, 4vh, 36px);
+}
+.footer-actions .pill { height: 46px; padding: 0 28px; font-size: 14.5px; }
+.footer-actions .pill--ghost { background: var(--bg-overlay); }
+
+.cal-wrap {
+  max-width: 1100px;
+  margin: clamp(30px, 5vh, 48px) auto 0;
+}
+/* No frame: the widget sits on the page. The height below is only
+   a starting guess. Calendly posts its real page height once the
+   iframe is up and the listener below adopts it, which is what
+   stops the widget scrolling inside a box of the wrong size. */
+.cal-embed {
+  min-width: 320px;
+  height: 1060px;
+  width: 100%;
+}
+.cal-embed iframe { width: 100%; height: 100%; border: 0; display: block; }
+@media (max-width: 680px) { .cal-embed { height: 1140px; } }
+/* Calendly will not render below 320px. Inside the page gutter that
+   is wider than a 320px phone, which pushed the whole document
+   sideways. Edge to edge here: no overflow, and the widget gets the
+   full viewport instead of the gutter remainder. */
+@media (max-width: 400px) {
+  .cal-embed {
+    min-width: 0;
+    width: auto;
+    margin-inline: calc(var(--space-gutter) * -1);
+  }
+}
+
+.footer-base {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 14px;
+  max-width: 1120px;
+  margin: clamp(90px, 18vh, 190px) auto 0;
+  font-size: 13px;
+  color: var(--fg-muted);
+}
+.footer-by { display: inline-flex; align-items: center; gap: 10px; }
+.footer-mark { width: 20px; height: 20px; flex: none; display: block; color: var(--fg); }
+.footer-copy { color: var(--fg-subtle); }
+
+@media (max-width: 560px) {
+  .footer-base { justify-content: center; text-align: center; }
+}
+</style>
+</head>
+
+<body>
+<svg xmlns="http://www.w3.org/2000/svg" style="display:none" aria-hidden="true">
+  <symbol id="i-make" viewBox="0 0 24 24"><path d="M13.38 3.498c-.27 0-.511.19-.566.465L9.85 18.986a.578.578 0 0 0 .453.678l4.095.826a.58.58 0 0 0 .682-.455l2.963-15.021a.578.578 0 0 0-.453-.678l-4.096-.826a.589.589 0 0 0-.113-.012zm-5.876.098a.576.576 0 0 0-.516.318L.062 17.697a.575.575 0 0 0 .256.774l3.733 1.877a.578.578 0 0 0 .775-.258l6.926-13.781a.577.577 0 0 0-.256-.776L7.762 3.658a.571.571 0 0 0-.258-.062zm11.74.115a.576.576 0 0 0-.576.576v15.426c0 .318.258.578.576.578h4.178a.58.58 0 0 0 .578-.578V4.287a.578.578 0 0 0-.578-.576Z"/></symbol>
+  <symbol id="i-zapier" viewBox="0 0 24 24"><path d="M4.157 0A4.151 4.151 0 0 0 0 4.161v15.678A4.151 4.151 0 0 0 4.157 24h15.682A4.152 4.152 0 0 0 24 19.839V4.161A4.152 4.152 0 0 0 19.839 0H4.157Zm10.61 8.761h.03a.577.577 0 0 1 .23.038.585.585 0 0 1 .201.124.63.63 0 0 1 .162.431.612.612 0 0 1-.162.435.58.58 0 0 1-.201.128.58.58 0 0 1-.23.042.529.529 0 0 1-.235-.042.585.585 0 0 1-.332-.328.559.559 0 0 1-.038-.235.613.613 0 0 1 .17-.431.59.59 0 0 1 .405-.162Zm2.853 1.572c.03.004.061.004.095.004.325-.011.646.064.937.219.238.144.431.355.552.609.128.279.189.582.185.888v.193a2 2 0 0 1 0 .219h-2.498c.003.227.075.45.204.642a.78.78 0 0 0 .646.265.714.714 0 0 0 .484-.136.642.642 0 0 0 .23-.318l.915.257a1.398 1.398 0 0 1-.28.537c-.14.159-.321.284-.521.355a2.234 2.234 0 0 1-.836.136 1.923 1.923 0 0 1-1.001-.245 1.618 1.618 0 0 1-.665-.703 2.221 2.221 0 0 1-.227-1.036 1.95 1.95 0 0 1 .48-1.398 1.9 1.9 0 0 1 1.3-.488Zm-9.607.023c.162.004.325.026.48.079.207.065.4.174.563.314.26.302.393.692.366 1.088v2.276H8.53l-.109-.711h-.065c-.064.163-.155.31-.272.439a1.122 1.122 0 0 1-.374.264 1.023 1.023 0 0 1-.453.083 1.334 1.334 0 0 1-.866-.264.965.965 0 0 1-.329-.801.993.993 0 0 1 .076-.431 1.02 1.02 0 0 1 .242-.363 1.478 1.478 0 0 1 1.043-.303h.952v-.181a.696.696 0 0 0-.136-.454.553.553 0 0 0-.438-.154.695.695 0 0 0-.378.086.48.48 0 0 0-.193.254l-.99-.144a1.26 1.26 0 0 1 .257-.563c.14-.174.321-.302.533-.378.261-.091.54-.136.82-.129.053-.003.106-.007.163-.007Zm4.384.007c.174 0 .347.038.506.114.182.083.34.211.458.374.257.423.377.911.351 1.406a2.53 2.53 0 0 1-.355 1.448 1.148 1.148 0 0 1-1.009.517c-.204 0-.401-.045-.582-.136a1.052 1.052 0 0 1-.48-.457 1.298 1.298 0 0 1-.114-.234h-.045l.004 1.784h-1.059v-4.713h.904l.117.805h.057c.068-.208.177-.401.328-.56a1.129 1.129 0 0 1 .843-.344h.076v-.004Zm7.559.084h.903l.113.805h.053a1.37 1.37 0 0 1 .235-.484.813.813 0 0 1 .313-.242.82.82 0 0 1 .39-.076h.234v1.051h-.401a.662.662 0 0 0-.313.008.623.623 0 0 0-.272.155.663.663 0 0 0-.174.26.683.683 0 0 0-.027.314v1.875h-1.054v-3.666Zm-17.515.003h3.262v.896L3.73 13.104l.034.113h1.973l.042.9H2.4v-.9l1.931-1.754-.045-.117H2.441v-.896Zm11.815 0h1.055v3.659h-1.055V10.45Zm3.443.684.019.016a.69.69 0 0 0-.351.045.756.756 0 0 0-.287.204c-.11.155-.174.336-.189.522h1.545c-.034-.526-.257-.787-.74-.787h.003Zm-5.718.163c-.026 0-.057 0-.083.004a.78.78 0 0 0-.31.053.746.746 0 0 0-.257.189 1.016 1.016 0 0 0-.204.695v.064c-.015.257.057.507.204.711a.634.634 0 0 0 .253.196.638.638 0 0 0 .314.061.644.644 0 0 0 .578-.265c.14-.223.204-.48.189-.74a1.216 1.216 0 0 0-.181-.711.677.677 0 0 0-.503-.257Zm-4.509 1.266a.464.464 0 0 0-.268.102.373.373 0 0 0-.114.276c0 .053.008.106.027.155a.375.375 0 0 0 .087.132.576.576 0 0 0 .397.11v.004a.863.863 0 0 0 .563-.182.573.573 0 0 0 .211-.457v-.14h-.903Z"/></symbol>
+  <symbol id="i-n8n" viewBox="0 0 24 24"><path d="M21.4737 5.6842c-1.1772 0-2.1663.8051-2.4468 1.8947h-2.8955c-1.235 0-2.289.893-2.492 2.111l-.1038.623a1.263 1.263 0 0 1-1.246 1.0555H11.289c-.2805-1.0896-1.2696-1.8947-2.4468-1.8947s-2.1663.8051-2.4467 1.8947H4.973c-.2805-1.0896-1.2696-1.8947-2.4468-1.8947C1.1311 9.4737 0 10.6047 0 12s1.131 2.5263 2.5263 2.5263c1.1772 0 2.1663-.8051 2.4468-1.8947h1.4223c.2804 1.0896 1.2696 1.8947 2.4467 1.8947 1.1772 0 2.1663-.8051 2.4468-1.8947h1.0008a1.263 1.263 0 0 1 1.2459 1.0555l.1038.623c.203 1.218 1.257 2.111 2.492 2.111h.3692c.2804 1.0895 1.2696 1.8947 2.4468 1.8947 1.3952 0 2.5263-1.131 2.5263-2.5263s-1.131-2.5263-2.5263-2.5263c-1.1772 0-2.1664.805-2.4468 1.8947h-.3692a1.263 1.263 0 0 1-1.246-1.0555l-.1037-.623A2.52 2.52 0 0 0 13.9607 12a2.52 2.52 0 0 0 .821-1.4794l.1038-.623a1.263 1.263 0 0 1 1.2459-1.0555h2.8955c.2805 1.0896 1.2696 1.8947 2.4468 1.8947 1.3952 0 2.5263-1.131 2.5263-2.5263s-1.131-2.5263-2.5263-2.5263m0 1.2632a1.263 1.263 0 0 1 1.2631 1.2631 1.263 1.263 0 0 1-1.2631 1.2632 1.263 1.263 0 0 1-1.2632-1.2632 1.263 1.263 0 0 1 1.2632-1.2631M2.5263 10.7368A1.263 1.263 0 0 1 3.7895 12a1.263 1.263 0 0 1-1.2632 1.2632A1.263 1.263 0 0 1 1.2632 12a1.263 1.263 0 0 1 1.2631-1.2632m6.3158 0A1.263 1.263 0 0 1 10.1053 12a1.263 1.263 0 0 1-1.2632 1.2632A1.263 1.263 0 0 1 7.579 12a1.263 1.263 0 0 1 1.2632-1.2632m10.1053 3.7895a1.263 1.263 0 0 1 1.2631 1.2632 1.263 1.263 0 0 1-1.2631 1.2631 1.263 1.263 0 0 1-1.2632-1.2631 1.263 1.263 0 0 1 1.2632-1.2632"/></symbol>
+  <symbol id="i-hubspot" viewBox="0 0 24 24"><path d="M18.164 7.93V5.084a2.198 2.198 0 001.267-1.978v-.067A2.2 2.2 0 0017.238.845h-.067a2.2 2.2 0 00-2.193 2.193v.067a2.196 2.196 0 001.252 1.973l.013.006v2.852a6.22 6.22 0 00-2.969 1.31l.012-.01-7.828-6.095A2.497 2.497 0 104.3 4.656l-.012.006 7.697 5.991a6.176 6.176 0 00-1.038 3.446c0 1.343.425 2.588 1.147 3.607l-.013-.02-2.342 2.343a1.968 1.968 0 00-.58-.095h-.002a2.033 2.033 0 102.033 2.033 1.978 1.978 0 00-.1-.595l.005.014 2.317-2.317a6.247 6.247 0 104.782-11.134l-.036-.005zm-.964 9.378a3.206 3.206 0 113.215-3.207v.002a3.206 3.206 0 01-3.207 3.207z"/></symbol>
+  <symbol id="i-notion" viewBox="0 0 24 24"><path d="M4.459 4.208c.746.606 1.026.56 2.428.466l13.215-.793c.28 0 .047-.28-.046-.326L17.86 1.968c-.42-.326-.981-.7-2.055-.607L3.01 2.295c-.466.046-.56.28-.374.466zm.793 3.08v13.904c0 .747.373 1.027 1.214.98l14.523-.84c.841-.046.935-.56.935-1.167V6.354c0-.606-.233-.933-.748-.887l-15.177.887c-.56.047-.747.327-.747.933zm14.337.745c.093.42 0 .84-.42.888l-.7.14v10.264c-.608.327-1.168.514-1.635.514-.748 0-.935-.234-1.495-.933l-4.577-7.186v6.952L12.21 19s0 .84-1.168.84l-3.222.186c-.093-.186 0-.653.327-.746l.84-.233V9.854L7.822 9.76c-.094-.42.14-1.026.793-1.073l3.456-.233 4.764 7.279v-6.44l-1.215-.139c-.093-.514.28-.887.747-.933zM1.936 1.035l13.31-.98c1.634-.14 2.055-.047 3.082.7l4.249 2.986c.7.513.934.653.934 1.213v16.378c0 1.026-.373 1.634-1.68 1.726l-15.458.934c-.98.047-1.448-.093-1.962-.747l-3.129-4.06c-.56-.747-.793-1.306-.793-1.96V2.667c0-.839.374-1.54 1.447-1.632z"/></symbol>
+  <symbol id="i-asana" viewBox="0 0 24 24"><path d="M18.78 12.653c-2.882 0-5.22 2.336-5.22 5.22s2.338 5.22 5.22 5.22 5.22-2.34 5.22-5.22-2.336-5.22-5.22-5.22zm-13.56 0c-2.88 0-5.22 2.337-5.22 5.22s2.338 5.22 5.22 5.22 5.22-2.338 5.22-5.22-2.336-5.22-5.22-5.22zm12-6.525c0 2.883-2.337 5.22-5.22 5.22-2.882 0-5.22-2.337-5.22-5.22 0-2.88 2.338-5.22 5.22-5.22 2.883 0 5.22 2.34 5.22 5.22z"/></symbol>
+  <symbol id="i-wordpress" viewBox="0 0 24 24"><path d="M21.469 6.825c.84 1.537 1.318 3.3 1.318 5.175 0 3.979-2.156 7.456-5.363 9.325l3.295-9.527c.615-1.54.82-2.771.82-3.864 0-.405-.026-.78-.07-1.11m-7.981.105c.647-.03 1.232-.105 1.232-.105.582-.075.514-.93-.067-.899 0 0-1.755.135-2.88.135-1.064 0-2.85-.15-2.85-.15-.585-.03-.661.855-.075.885 0 0 .54.061 1.125.09l1.68 4.605-2.37 7.08L5.354 6.9c.649-.03 1.234-.1 1.234-.1.585-.075.516-.93-.065-.896 0 0-1.746.138-2.874.138-.2 0-.438-.008-.69-.015C4.911 3.15 8.235 1.215 12 1.215c2.809 0 5.365 1.072 7.286 2.833-.046-.003-.091-.009-.141-.009-1.06 0-1.812.923-1.812 1.914 0 .89.513 1.643 1.06 2.531.411.72.89 1.643.89 2.977 0 .915-.354 1.994-.821 3.479l-1.075 3.585-3.9-11.61.001.014zM12 22.784c-1.059 0-2.081-.153-3.048-.437l3.237-9.406 3.315 9.087c.024.053.05.101.078.149-1.12.393-2.325.609-3.582.609M1.211 12c0-1.564.336-3.05.935-4.39L7.29 21.709C3.694 19.96 1.212 16.271 1.211 12M12 0C5.385 0 0 5.385 0 12s5.385 12 12 12 12-5.385 12-12S18.615 0 12 0"/></symbol>
+    <symbol id="i-squarespace" viewBox="0 0 24 24"><path d="M22.655 8.719c-1.802-1.801-4.726-1.801-6.564 0l-7.351 7.35c-.45.45-.45 1.2 0 1.65.45.449 1.2.449 1.65 0l7.351-7.351c.899-.899 2.362-.899 3.264 0 .9.9.9 2.364 0 3.264l-7.239 7.239c.9.899 2.362.899 3.263 0l5.589-5.589c1.836-1.838 1.836-4.763.037-6.563zm-2.475 2.437c-.451-.45-1.201-.45-1.65 0l-7.354 7.389c-.9.899-2.361.899-3.262 0-.45-.45-1.2-.45-1.65 0s-.45 1.2 0 1.649c1.801 1.801 4.726 1.801 6.564 0l7.351-7.35c.449-.487.449-1.239.001-1.688zm-2.439-7.35c-1.801-1.801-4.726-1.801-6.564 0l-7.351 7.351c-.45.449-.45 1.199 0 1.649s1.2.45 1.65 0l7.395-7.351c.9-.899 2.371-.899 3.27 0 .451.45 1.201.45 1.65 0 .421-.487.421-1.199-.029-1.649h-.021zm-2.475 2.437c-.45-.45-1.2-.45-1.65 0l-7.351 7.389c-.899.9-2.363.9-3.265 0-.9-.899-.9-2.363 0-3.264l7.239-7.239c-.9-.9-2.362-.9-3.263 0L1.35 8.719c-1.8 1.8-1.8 4.725 0 6.563 1.801 1.801 4.725 1.801 6.564 0l7.35-7.351c.451-.488.451-1.238 0-1.688h.002z"/></symbol>
+  <symbol id="i-wix" viewBox="0 0 24 24"><path d="m0 7.354 2.113 9.292h.801a1.54 1.54 0 0 0 1.506-1.218l1.351-6.34a.171.171 0 0 1 .167-.137c.08 0 .15.058.167.137l1.352 6.34a1.54 1.54 0 0 0 1.506 1.218h.805l2.113-9.292h-.565c-.62 0-1.159.43-1.296 1.035l-1.26 5.545-1.106-5.176a1.76 1.76 0 0 0-2.19-1.324c-.639.176-1.113.716-1.251 1.365l-1.094 5.127-1.26-5.537A1.33 1.33 0 0 0 .563 7.354H0zm13.992 0a.951.951 0 0 0-.951.95v8.342h.635a.952.952 0 0 0 .951-.95V7.353h-.635zm1.778 0 3.158 4.66-3.14 4.632h1.325c.368 0 .712-.181.918-.486l1.756-2.59a.12.12 0 0 1 .197 0l1.754 2.59c.206.305.55.486.918.486h1.326l-3.14-4.632L24 7.354h-1.326c-.368 0-.712.181-.918.486l-1.772 2.617a.12.12 0 0 1-.197 0L18.014 7.84a1.108 1.108 0 0 0-.918-.486H15.77z"/></symbol>
+  <symbol id="i-figma" viewBox="0 0 24 24"><path d="M15.852 8.981h-4.588V0h4.588c2.476 0 4.49 2.014 4.49 4.49s-2.014 4.491-4.49 4.491zM12.735 7.51h3.117c1.665 0 3.019-1.355 3.019-3.019s-1.355-3.019-3.019-3.019h-3.117V7.51zm0 1.471H8.148c-2.476 0-4.49-2.014-4.49-4.49S5.672 0 8.148 0h4.588v8.981zm-4.587-7.51c-1.665 0-3.019 1.355-3.019 3.019s1.354 3.02 3.019 3.02h3.117V1.471H8.148zm4.587 15.019H8.148c-2.476 0-4.49-2.014-4.49-4.49s2.014-4.49 4.49-4.49h4.588v8.98zM8.148 8.981c-1.665 0-3.019 1.355-3.019 3.019s1.355 3.019 3.019 3.019h3.117V8.981H8.148zM8.172 24c-2.489 0-4.515-2.014-4.515-4.49s2.014-4.49 4.49-4.49h4.588v4.441c0 2.503-2.047 4.539-4.563 4.539zm-.024-7.51a3.023 3.023 0 0 0-3.019 3.019c0 1.665 1.365 3.019 3.044 3.019 1.705 0 3.093-1.376 3.093-3.068v-2.97H8.148zm7.704 0h-.098c-2.476 0-4.49-2.014-4.49-4.49s2.014-4.49 4.49-4.49h.098c2.476 0 4.49 2.014 4.49 4.49s-2.014 4.49-4.49 4.49zm-.097-7.509c-1.665 0-3.019 1.355-3.019 3.019s1.355 3.019 3.019 3.019h.098c1.665 0 3.019-1.355 3.019-3.019s-1.355-3.019-3.019-3.019h-.098z"/></symbol>
+  <symbol id="i-photoshop" viewBox="0 0 24 24"><path d="M9.85 8.42c-.37-.15-.77-.21-1.18-.2-.26 0-.49 0-.68.01-.2-.01-.34 0-.41.01v3.36c.14.01.27.02.39.02h.53c.39 0 .78-.06 1.15-.18.32-.09.6-.28.82-.53.21-.25.31-.59.31-1.03.01-.31-.07-.62-.23-.89-.17-.26-.41-.46-.7-.57zM19.75.3H4.25C1.9.3 0 2.2 0 4.55v14.899c0 2.35 1.9 4.25 4.25 4.25h15.5c2.35 0 4.25-1.9 4.25-4.25V4.55C24 2.2 22.1.3 19.75.3zm-7.391 11.65c-.399.56-.959.98-1.609 1.22-.68.25-1.43.34-2.25.34-.24 0-.4 0-.5-.01s-.24-.01-.43-.01v3.209c.01.07-.04.131-.11.141H5.52c-.08 0-.12-.041-.12-.131V6.42c0-.07.03-.11.1-.11.17 0 .33 0 .56-.01.24-.01.49-.01.76-.02s.56-.01.87-.02c.31-.01.61-.01.91-.01.82 0 1.5.1 2.06.31.5.17.96.45 1.34.82.32.32.57.71.73 1.14.149.42.229.85.229 1.3.001.86-.199 1.57-.6 2.13zm7.091 3.89c-.28.4-.671.709-1.12.891-.49.209-1.09.318-1.811.318-.459 0-.91-.039-1.359-.129-.35-.061-.7-.17-1.02-.32-.07-.039-.121-.109-.111-.189v-1.74c0-.029.011-.07.041-.09.029-.02.06-.01.09.01.39.23.8.391 1.24.49.379.1.779.15 1.18.15.38 0 .65-.051.83-.141.16-.07.27-.24.27-.42 0-.141-.08-.27-.24-.4-.16-.129-.489-.279-.979-.471-.51-.18-.979-.42-1.42-.719-.31-.221-.569-.51-.761-.85-.159-.32-.239-.67-.229-1.021 0-.43.12-.84.341-1.21.25-.4.619-.72 1.049-.92.469-.239 1.059-.349 1.769-.349.41 0 .83.03 1.24.09.3.04.59.12.86.23.039.01.08.05.1.09.01.04.02.08.02.12v1.63c0 .04-.02.08-.05.1-.09.02-.14.02-.18 0-.3-.16-.62-.27-.96-.34-.37-.08-.74-.13-1.12-.13-.2-.01-.41.02-.601.07-.129.03-.24.1-.31.2-.05.08-.08.18-.08.27s.04.18.101.26c.09.11.209.2.34.27.229.12.47.23.709.33.541.18 1.061.43 1.541.73.33.209.6.49.789.83.16.318.24.67.23 1.029.011.471-.129.94-.389 1.331z"/></symbol>
+  <symbol id="i-illustrator" viewBox="0 0 24 24"><path d="M10.53 10.73c-.1-.31-.19-.61-.29-.92-.1-.31-.19-.6-.27-.89-.08-.28-.15-.54-.22-.78h-.02c-.09.43-.2.86-.34 1.29-.15.48-.3.98-.46 1.48-.14.51-.29.98-.44 1.4h2.54c-.06-.211-.14-.46-.23-.721-.09-.269-.18-.559-.27-.859zM19.75.3H4.25C1.9.3 0 2.2 0 4.55v14.9c0 2.35 1.9 4.25 4.25 4.25h15.5c2.35 0 4.25-1.9 4.25-4.25V4.55C24 2.2 22.1.3 19.75.3zM14.7 16.83h-2.091c-.069.01-.139-.04-.159-.11l-.82-2.38H7.91l-.76 2.35c-.02.09-.1.15-.19.141H5.08c-.11 0-.14-.061-.11-.18L8.19 7.38c.03-.1.06-.21.1-.33.04-.21.06-.43.06-.65-.01-.05.03-.1.08-.11h2.59c.08 0 .12.03.13.08l3.65 10.3c.03.109 0 .16-.1.16zm3.4-.15c0 .11-.039.16-.129.16H16.01c-.1 0-.15-.061-.15-.16v-7.7c0-.1.041-.14.131-.14h1.98c.09 0 .129.05.129.14v7.7zm-.209-9.03c-.231.24-.571.37-.911.35-.33.01-.65-.12-.891-.35-.23-.25-.35-.58-.34-.92-.01-.34.12-.66.359-.89.242-.23.562-.35.892-.35.391 0 .689.12.91.35.22.24.34.56.33.89.01.34-.11.67-.349.92z"/></symbol>
+  <symbol id="i-claude" viewBox="0 0 24 24"><path d="m4.7144 15.9555 4.7174-2.6471.079-.2307-.079-.1275h-.2307l-.7893-.0486-2.6956-.0729-2.3375-.0971-2.2646-.1214-.5707-.1215-.5343-.7042.0546-.3522.4797-.3218.686.0608 1.5179.1032 2.2767.1578 1.6514.0972 2.4468.255h.3886l.0546-.1579-.1336-.0971-.1032-.0972L6.973 9.8356l-2.55-1.6879-1.3356-.9714-.7225-.4918-.3643-.4614-.1578-1.0078.6557-.7225.8803.0607.2246.0607.8925.686 1.9064 1.4754 2.4893 1.8336.3643.3035.1457-.1032.0182-.0728-.164-.2733-1.3539-2.4467-1.445-2.4893-.6435-1.032-.17-.6194c-.0607-.255-.1032-.4674-.1032-.7285L6.287.1335 6.6997 0l.9957.1336.419.3642.6192 1.4147 1.0018 2.2282 1.5543 3.0296.4553.8985.2429.8318.091.255h.1579v-.1457l.1275-1.706.2368-2.0947.2307-2.6957.0789-.7589.3764-.9107.7468-.4918.5828.2793.4797.686-.0668.4433-.2853 1.8517-.5586 2.9021-.3643 1.9429h.2125l.2429-.2429.9835-1.3053 1.6514-2.0643.7286-.8196.85-.9046.5464-.4311h1.0321l.759 1.1293-.34 1.1657-1.0625 1.3478-.8804 1.1414-1.2628 1.7-.7893 1.36.0729.1093.1882-.0183 2.8535-.607 1.5421-.2794 1.8396-.3157.8318.3886.091.3946-.3278.8075-1.967.4857-2.3072.4614-3.4364.8136-.0425.0304.0486.0607 1.5482.1457.6618.0364h1.621l3.0175.2247.7892.522.4736.6376-.079.4857-1.2142.6193-1.6393-.3886-3.825-.9107-1.3113-.3279h-.1822v.1093l1.0929 1.0686 2.0035 1.8092 2.5075 2.3314.1275.5768-.3218.4554-.34-.0486-2.2039-1.6575-.85-.7468-1.9246-1.621h-.1275v.17l.4432.6496 2.3436 3.5214.1214 1.0807-.17.3521-.6071.2125-.6679-.1214-1.3721-1.9246L14.38 17.959l-1.1414-1.9428-.1397.079-.674 7.2552-.3156.3703-.7286.2793-.6071-.4614-.3218-.7468.3218-1.4753.3886-1.9246.3157-1.53.2853-1.9004.17-.6314-.0121-.0425-.1397.0182-1.4328 1.9672-2.1796 2.9446-1.7243 1.8456-.4128.164-.7164-.3704.0667-.6618.4008-.5889 2.386-3.0357 1.4389-1.882.929-1.0868-.0062-.1579h-.0546l-6.3385 4.1164-1.1293.1457-.4857-.4554.0608-.7467.2307-.2429 1.9064-1.3114Z"/></symbol>
+  <symbol id="p-arrow-up-right" viewBox="0 0 256 256"><path d="M200,64V168a8,8,0,0,1-16,0V83.31L69.66,197.66a8,8,0,0,1-11.32-11.32L172.69,72H88a8,8,0,0,1,0-16H192A8,8,0,0,1,200,64Z"/></symbol>
+  <symbol id="p-funnel-simple" viewBox="0 0 256 256"><path d="M204,136a12,12,0,0,1-12,12H64a12,12,0,0,1,0-24H192A12,12,0,0,1,204,136Zm28-60H24a12,12,0,0,0,0,24H232a12,12,0,0,0,0-24Zm-80,96H104a12,12,0,0,0,0,24h48a12,12,0,0,0,0-24Z"/></symbol>
+</svg>
+
+<a class="skip-link" href="#main">Skip to content</a>
+
+<div class="nav-wrap">
+  <nav class="nav" data-reveal="nav" style="--delay:0ms" aria-label="Primary">
+    <a class="brand" href="#main">
+      <!-- Traced from Chris Automate logo.jpg: marching-squares contours,
+           even-odd fill so the counters stay open. currentColor, so it
+           inverts with the theme instead of needing a second asset. -->
+      <svg class="brand-mark" viewBox="0 0 100 100" fill="currentColor"
+           fill-rule="evenodd" aria-hidden="true"><path d="M21.71 24.20 L65.84 24.20 L65.30 25.09 L64.95 25.09 L62.81 27.22 L62.46 27.22 L60.32 29.36 L59.96 29.36 L57.12 32.21 L56.76 32.21 L54.27 34.70 L53.91 34.70 L51.42 37.19 L51.07 37.19 L48.58 39.68 L48.22 39.68 L45.73 42.17 L45.37 42.17 L43.24 44.31 L42.88 44.31 L35.05 51.42 L34.52 51.25 L34.52 41.28 L41.46 35.05 L41.81 35.05 L44.31 32.56 L44.66 32.56 L44.84 32.03 L29.72 31.85 L29.18 32.38 L29.18 70.46 L29.72 71.00 L56.05 71.00 L56.58 70.46 L54.80 66.90 L54.09 66.19 L53.02 64.06 L51.96 62.99 L51.60 61.92 L56.76 57.12 L57.47 57.12 L58.72 58.36 L58.72 58.72 L61.57 62.63 L64.41 68.33 L64.41 69.04 L65.84 71.89 L65.84 72.95 L66.19 73.31 L66.55 75.44 L66.90 75.80 L66.90 76.87 L67.26 77.22 L67.08 79.18 L21.89 79.18 L21.35 78.65 L21.35 24.56 L21.71 24.20Z"/><path d="M74.38 24.20 L80.96 24.02 L81.49 24.56 L81.49 78.65 L80.96 79.18 L73.49 79.18 L72.95 78.65 L72.24 74.73 L71.53 73.31 L71.53 72.24 L71.17 71.89 L70.46 69.04 L69.75 67.97 L69.75 67.26 L69.04 66.19 L69.04 65.48 L66.90 61.21 L65.12 58.72 L64.77 57.65 L61.57 53.38 L61.57 53.02 L64.23 50.36 L64.59 50.36 L66.73 48.22 L67.44 48.22 L69.75 50.89 L69.75 51.25 L72.60 55.16 L72.95 56.23 L73.67 56.23 L73.49 35.77 L73.13 35.77 L71.71 37.19 L71.35 37.19 L68.86 39.68 L68.51 39.68 L66.01 42.17 L65.66 42.17 L63.17 44.66 L62.81 44.66 L60.32 47.15 L59.96 47.15 L57.47 49.64 L57.12 49.64 L54.63 52.14 L54.27 52.14 L51.78 54.63 L51.42 54.63 L48.93 57.12 L48.58 57.12 L46.09 59.61 L45.73 59.61 L38.61 66.01 L35.05 66.01 L34.52 65.48 L34.52 59.07 L74.38 24.20Z"/></svg>
+      <span class="brand-text"><b>CHRIS</b><span>Portfolio</span></span>
+    </a>
+
+    <div class="nav-actions">
+      <!-- Chris: drop resume.pdf next to index.html and this is live. -->
+      <a class="pill pill--ghost" href="resume.pdf" target="_blank" rel="noopener">
+        Resume
+        <svg class="pill-ico" aria-hidden="true"><use href="#p-arrow-up-right"/></svg>
+        <span class="sr-only">(PDF, opens in a new tab)</span>
+      </a>
+      <a class="pill pill--solid" href="#contact">Book a call</a>
+      <button class="theme-toggle" type="button" id="themeToggle"
+              aria-label="Switch to dark theme" aria-pressed="false">
+        <!-- Phosphor Icons (MIT), inlined for the single-file build -->
+        <svg class="icon-sun" viewBox="0 0 256 256" fill="currentColor" aria-hidden="true">
+          <path d="M120 40V16a8 8 0 0 1 16 0v24a8 8 0 0 1-16 0Zm72 88a64 64 0 1 1-64-64 64.07 64.07 0 0 1 64 64Zm-16 0a48 48 0 1 0-48 48 48.05 48.05 0 0 0 48-48ZM58.34 69.66a8 8 0 0 0 11.32-11.32l-16-16a8 8 0 0 0-11.32 11.32Zm0 116.68-16 16a8 8 0 0 0 11.32 11.32l16-16a8 8 0 0 0-11.32-11.32ZM192 72a8 8 0 0 0 5.66-2.34l16-16a8 8 0 0 0-11.32-11.32l-16 16A8 8 0 0 0 192 72Zm5.66 114.34a8 8 0 0 0-11.32 11.32l16 16a8 8 0 0 0 11.32-11.32ZM48 128a8 8 0 0 0-8-8H16a8 8 0 0 0 0 16h24a8 8 0 0 0 8-8Zm80 80a8 8 0 0 0-8 8v24a8 8 0 0 0 16 0v-24a8 8 0 0 0-8-8Zm112-88h-24a8 8 0 0 0 0 16h24a8 8 0 0 0 0-16Z"/>
+        </svg>
+        <svg class="icon-moon" viewBox="0 0 256 256" fill="currentColor" aria-hidden="true">
+          <path d="M233.54 142.23a8 8 0 0 0-8-2 88.08 88.08 0 0 1-109.8-109.8 8 8 0 0 0-10-10 104.84 104.84 0 0 0-52.91 37A104 104 0 0 0 136 224a103.09 103.09 0 0 0 62.52-20.88 104.84 104.84 0 0 0 37-52.91 8 8 0 0 0-1.98-7.98Zm-44.64 48.11A88 88 0 0 1 65.66 67.11a89 89 0 0 1 31.4-26A106 106 0 0 0 96 56a104.11 104.11 0 0 0 104 104 106 106 0 0 0 14.92-1.06 89 89 0 0 1-26.02 31.4Z"/>
+        </svg>
+      </button>
+    </div>
+  </nav>
+</div>
+
+<main id="main">
+<section class="hero">
+  <div class="portrait" id="portrait" data-reveal="portrait" style="--delay:80ms">
+   <div class="portrait-veil" id="portraitVeil">
+    <span class="shadow-pad" aria-hidden="true"></span>
+    <div class="portrait-float">
+      <div class="portrait-inner" id="portraitInner">
+        <span class="ripples" id="ripples" aria-hidden="true"></span>
+        <span class="disc-stack" aria-hidden="true"><i></i><i></i></span>
+        <picture>
+          <source srcset="profile-600.webp" type="image/webp" />
+          <img src="profile-600.jpg" width="600" height="600" fetchpriority="high"
+               decoding="async" alt="Chris" />
+        </picture>
+      </div>
+    </div>
+   </div>
+  </div>
+
+  <div class="hero-copy">
+    <h1 data-reveal style="--delay:200ms">
+      GoHighLevel (GHL) Specialist
+      <span class="h1-tag">CRM, AI Automation &amp; Workflow Systems</span>
+    </h1>
+
+    <p class="sub" data-reveal style="--delay:290ms">
+      I help business owners set up, build, and manage their GoHighLevel systems &mdash; organizing the CRM, improving automations, and making sure leads are followed up on properly.
+    </p>
+
+    <div class="hero-cta" data-reveal style="--delay:380ms">
+      <a class="scroll-cue" href="#skills">
+        <svg aria-hidden="true"><use href="#p-funnel-simple"/></svg>
+        <span class="sr-only">Scroll to skills and tools</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+
+<section class="section" id="skills">
+  <div class="section-inner">
+    <div class="section-head section-head--center">
+      <p class="eyebrow" data-inview>Skills &amp; Tools</p>
+      <h2 data-inview style="--delay:60ms">What I Work With</h2>
+      <p data-inview style="--delay:120ms">
+        The platforms I design, build and automate with.
+      </p>
+    </div>
+    <div class="kit-grid">
+        <article class="kit-card" data-inview style="--delay:0ms">
+          <h3>Automation</h3>
+          <p class="kit-note">Workflow platforms</p>
+          <ul class="kit-list">
+            <li class="kit-item"><span class="kit-tile" style="--b:#6D00CC;--bd:#A855F7"><svg class="kit-logo" fill="currentColor" aria-hidden="true"><use href="#i-make"/></svg></span><span>Make</span></li>
+            <li class="kit-item"><span class="kit-tile" style="--b:#FF4F00"><svg class="kit-logo" fill="currentColor" aria-hidden="true"><use href="#i-zapier"/></svg></span><span>Zapier</span></li>
+            <li class="kit-item"><span class="kit-tile" style="--b:#EA4B71"><svg class="kit-logo" fill="currentColor" aria-hidden="true"><use href="#i-n8n"/></svg></span><span>n8n</span></li>
+          </ul>
+        </article>
+
+        <article class="kit-card" data-inview style="--delay:70ms">
+          <h3>CRM &amp; Marketing</h3>
+          <p class="kit-note">Sales &amp; engagement</p>
+          <ul class="kit-list">
+            <li class="kit-item"><span class="kit-tile kit-tile--img"><img src="logos/gohighlevel.png" alt="" loading="lazy" decoding="async" /></span><span>GoHighLevel</span></li>
+            <li class="kit-item"><span class="kit-tile" style="--b:#FF7A59"><svg class="kit-logo" fill="currentColor" aria-hidden="true"><use href="#i-hubspot"/></svg></span><span>HubSpot</span></li>
+            <li class="kit-item"><span class="kit-tile kit-tile--mono">A</span><span>ActiveCampaign</span></li>
+          </ul>
+        </article>
+
+        <article class="kit-card" data-inview style="--delay:140ms">
+          <h3>Project Management</h3>
+          <p class="kit-note">Team collaboration</p>
+          <ul class="kit-list">
+            <li class="kit-item"><span class="kit-tile" style="--b:#0F172A;--bd:#E8EDF5"><svg class="kit-logo" fill="currentColor" aria-hidden="true"><use href="#i-notion"/></svg></span><span>Notion</span></li>
+            <li class="kit-item"><span class="kit-tile" style="--b:#F06A6A"><svg class="kit-logo" fill="currentColor" aria-hidden="true"><use href="#i-asana"/></svg></span><span>Asana</span></li>
+            <li class="kit-item"><span class="kit-tile kit-tile--mark"><img src="logos/monday.png" alt="" loading="lazy" decoding="async" /></span><span>Monday.com</span></li>
+          </ul>
+        </article>
+
+        <article class="kit-card" data-inview style="--delay:210ms">
+          <h3>Web &amp; CMS</h3>
+          <p class="kit-note">Sites and landing pages</p>
+          <ul class="kit-list">
+            <li class="kit-item"><span class="kit-tile" style="--b:#21759B;--bd:#56AFD4"><svg class="kit-logo" fill="currentColor" aria-hidden="true"><use href="#i-wordpress"/></svg></span><span>WordPress</span></li>
+            <li class="kit-item"><span class="kit-tile" style="--b:#0F172A;--bd:#E8EDF5"><svg class="kit-logo" fill="currentColor" aria-hidden="true"><use href="#i-squarespace"/></svg></span><span>Squarespace</span></li>
+            <li class="kit-item"><span class="kit-tile" style="--b:#0C6EFC;--bd:#4C94FF"><svg class="kit-logo" fill="currentColor" aria-hidden="true"><use href="#i-wix"/></svg></span><span>Wix</span></li>
+          </ul>
+        </article>
+
+        <article class="kit-card" data-inview style="--delay:280ms">
+          <h3>Design</h3>
+          <p class="kit-note">Brand &amp; visuals</p>
+          <ul class="kit-list">
+            <li class="kit-item"><span class="kit-tile" style="--b:#F24E1E"><svg class="kit-logo" fill="currentColor" aria-hidden="true"><use href="#i-figma"/></svg></span><span>Figma</span></li>
+            <li class="kit-item"><span class="kit-tile" style="--b:#31A8FF"><svg class="kit-logo" fill="currentColor" aria-hidden="true"><use href="#i-photoshop"/></svg></span><span>Photoshop</span></li>
+            <li class="kit-item"><span class="kit-tile" style="--b:#FF9A00"><svg class="kit-logo" fill="currentColor" aria-hidden="true"><use href="#i-illustrator"/></svg></span><span>Illustrator</span></li>
+          </ul>
+        </article>
+
+        <article class="kit-card" data-inview style="--delay:350ms">
+          <h3>AI &amp; Development</h3>
+          <p class="kit-note">Build and ship</p>
+          <ul class="kit-list">
+            <li class="kit-item"><span class="kit-tile" style="--b:#D97757"><svg class="kit-logo" fill="currentColor" aria-hidden="true"><use href="#i-claude"/></svg></span><span>Claude Code</span></li>
+            <li class="kit-item"><span class="kit-tile kit-tile--mono kit-tile--code">&lt;/&gt;</span><span>HTML / CSS / JS</span></li>
+            <li class="kit-item"><span class="kit-tile kit-tile--img"><img src="logos/higgsfield.png" alt="" loading="lazy" decoding="async" /></span><span>Higgsfield</span></li>
+          </ul>
+        </article>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="selected">
+  <div class="section-inner">
+    <div class="section-head">
+      <h2 data-inview>Selected work</h2>
+    </div>
+    <div class="sw-grid">
+        <figure class="sw-item" data-inview style="--delay:0ms">
+          <div class="sw-media sw-a">
+            <picture>
+              <source srcset="work/unreal-productions.webp" type="image/webp" />
+              <img src="work/unreal-productions.jpg" alt="Unreal Productions site &mdash; home, shows, tour and booking pages" loading="lazy" decoding="async" />
+            </picture>
+          </div>
+          <figcaption class="sw-meta">
+            <div class="sw-title"><img class="sw-logo" src="logos/unreal.png" alt="" loading="lazy" decoding="async" /><h3>Unreal Productions</h3></div>
+            <p>Landing pages and campaign artwork for live shows, assembled from one reusable page system.</p>
+          </figcaption>
+        </figure>
+        <figure class="sw-item" data-inview style="--delay:70ms">
+          <div class="sw-media sw-b">
+            <picture>
+              <source srcset="work/revolva-wayfinding.webp" type="image/webp" />
+              <img src="work/revolva-wayfinding.jpg" alt="Revolva Wayfinding site &mdash; services, about and booking pages" loading="lazy" decoding="async" />
+            </picture>
+          </div>
+          <figcaption class="sw-meta">
+            <div class="sw-title"><img class="sw-logo" src="logos/revolva.png" alt="" loading="lazy" decoding="async" /><h3>Revolva Wayfinding</h3></div>
+            <p>Squarespace rebuild: navigation and hierarchy reordered around what clients actually booked.</p>
+          </figcaption>
+        </figure>
+        <figure class="sw-item" data-inview style="--delay:140ms">
+          <div class="sw-media sw-c">
+            <picture>
+              <source srcset="work/home-hero-maintenance.webp" type="image/webp" />
+              <img src="work/home-hero-maintenance.jpg" alt="Home Hero Maintenance lead-generation site &mdash; service and location pages" loading="lazy" decoding="async" />
+            </picture>
+          </div>
+          <figcaption class="sw-meta">
+            <div class="sw-title"><img class="sw-logo" src="logos/home-hero.png" alt="" loading="lazy" decoding="async" /><h3>Home Hero Maintenance</h3></div>
+            <p>Lead-generation site with service and location pages, on-page SEO and CRM-routed forms.</p>
+          </figcaption>
+        </figure>
+        <figure class="sw-item" data-inview style="--delay:210ms">
+          <div class="sw-media sw-d">
+            <picture>
+              <source srcset="work/anique-digital.webp" type="image/webp" />
+              <img src="work/anique-digital.jpg" alt="Anique Digital Innovators client website build" loading="lazy" decoding="async" />
+            </picture>
+          </div>
+          <figcaption class="sw-meta">
+            <div class="sw-title"><img class="sw-logo" src="logos/anique.png" alt="" loading="lazy" decoding="async" /><h3>Anique Digital Innovators</h3></div>
+            <p>Client websites delivered to brief, from supplied designs through to a responsive build.</p>
+          </figcaption>
+        </figure>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+
+<section class="section" id="experience">
+  <div class="section-inner">
+    <div class="section-head">
+      <p class="method-tag" data-inview>/ experience</p>
+      <h2 data-inview style="--delay:60ms">5+ years, 5+ companies</h2>
+      <p data-inview style="--delay:120ms">Including local and part-time work.</p>
+    </div>
+
+    <ol class="xp-list">
+      <li class="xp-row" data-inview style="--delay:0ms">
+        <span class="xp-mark"><img src="logos/unreal.png" alt="" loading="lazy" decoding="async" /></span>
+        <div class="xp-body">
+          <h3>Unreal Productions <span>&middot; Senior Graphics &amp; Web Designer</span></h3>
+          <p class="xp-meta">Remote &middot; 2023 &ndash; 2026</p>
+          <ul class="xp-points">
+            <li>Led graphics and web design across the brand &mdash; landing pages, campaign artwork, social and promotional assets &mdash; working to a <b>consistent visual system</b> rather than one-off files.</li>
+            <li>Created <b>multiple landing pages for productions</b> &mdash; shows, launches and campaigns &mdash; each with its own look but built on the same underlying structure, so a new page could go live without starting from zero.</li>
+            <li>Built <b>reusable page sections and design patterns</b> so new campaigns could be assembled instead of designed from scratch, cutting turnaround on launches.</li>
+            <li>Handled responsive behaviour, image optimisation and cross-device QA, so pages held up on mobile where most of the traffic landed.</li>
+          </ul>
+        </div>
+      </li>
+
+      <li class="xp-row" data-inview style="--delay:70ms">
+        <span class="xp-mark"><img src="logos/revolva.png" alt="" loading="lazy" decoding="async" /></span>
+        <div class="xp-body">
+          <h3>Revolva Wayfinding <span>&middot; Web Designer</span></h3>
+          <p class="xp-meta">Remote &middot; 2022 &ndash; 2025</p>
+          <ul class="xp-points">
+            <li>Restructured the site on <b>Squarespace</b>, reorganising navigation and page hierarchy around the offerings clients actually booked.</li>
+            <li>Designed and built the core pages &mdash; services, about and booking &mdash; to a single visual system consistent with the brand mark.</li>
+            <li>Connected enquiry and booking flows to the client's scheduling and email tools, so leads were captured and followed up without manual chasing.</li>
+          </ul>
+        </div>
+      </li>
+
+      <li class="xp-row" data-inview style="--delay:140ms">
+        <span class="xp-mark"><img src="logos/home-hero.png" alt="" loading="lazy" decoding="async" /></span>
+        <div class="xp-body">
+          <h3>Home Hero Maintenance <span>&middot; Web Developer</span></h3>
+          <p class="xp-meta">Remote &middot; 2021 &ndash; 2024</p>
+          <ul class="xp-points">
+            <li>Built and maintained the company's <b>lead-generation site</b>: service pages, location pages and quote-request forms aimed at local search.</li>
+            <li>Implemented on-page SEO &mdash; structured headings, metadata, page speed and mobile layout &mdash; to improve visibility for service-area searches.</li>
+            <li>Wired form submissions into the <b>CRM and notification workflow</b>, so enquiries were routed to the right person and answered the same day.</li>
+          </ul>
+        </div>
+      </li>
+
+      <li class="xp-row" data-inview style="--delay:210ms">
+        <span class="xp-mark"><img src="logos/anique.png" alt="" loading="lazy" decoding="async" /></span>
+        <div class="xp-body">
+          <h3>Anique Digital Innovators <span>&middot; Web Developer</span></h3>
+          <p class="xp-meta">Project-based</p>
+          <ul class="xp-points">
+            <li>Delivered client websites to brief, taking supplied designs and brand assets through to a responsive, working build.</li>
+            <li>Worked inside existing brand systems and hand-off requirements, keeping markup clean and documented so the in-house team could maintain it after delivery.</li>
+          </ul>
+        </div>
+      </li>
+    </ol>
+  </div>
+</section>
+
+<section class="section" id="work-history">
+  <div class="section-inner">
+    <div class="section-head">
+      <p class="method-tag" data-inview>/ work history</p>
+      <h2 data-inview style="--delay:60ms">Work history</h2>
+    </div>
+
+    <div data-inview style="--delay:120ms">
+      <p class="wh-insight">Insights from completed jobs</p>
+      <span class="wh-chip">Clear Communicator <b>1</b></span>
+
+      <div class="wh-tabs" role="tablist" aria-label="Work history">
+        <button class="wh-tab" type="button" role="tab" id="wh-tab-done"
+                aria-controls="wh-panel-done" aria-selected="true">Completed jobs (4)</button>
+        <button class="wh-tab" type="button" role="tab" id="wh-tab-live"
+                aria-controls="wh-panel-live" aria-selected="false" tabindex="-1">In progress (1)</button>
+      </div>
+
+      <div id="wh-panel-done" role="tabpanel" aria-labelledby="wh-tab-done" tabindex="0">
+        <ul class="wh-list">
+          <li class="wh-job">
+            <h3 class="wh-title">Go High Level Expert: Migration system implementation + team training</h3>
+            <p class="wh-meta"><span class="stars" style="--rating:5" role="img" aria-label="5.0 out of 5"><i></i></span><span class="wh-score">5.0</span>
+              <span class="wh-sep">|</span>
+              <span>Apr 7, 2026 &ndash; May 25, 2026</span>
+            </p>
+            <p class="wh-quote">&ldquo;Chris is great to communicate and work with and he delivered great work. I highly recommend working with him.&rdquo;</p>
+            <p class="wh-endorse">Endorsed by client</p>
+            <span class="wh-chip wh-chip--solid">Clear Communicator</span>
+          </li>
+
+          <li class="wh-job">
+            <h3 class="wh-title">GoHighLevel Expert Needed &ndash; Multi-Channel Automation &amp; Integration Specialist</h3>
+            <p class="wh-meta"><span class="stars" style="--rating:4" role="img" aria-label="4.0 out of 5"><i></i></span><span class="wh-score">4.0</span>
+              <span class="wh-sep">|</span>
+              <span>Mar 2, 2026 &ndash; Apr 20, 2026</span>
+            </p>
+          </li>
+
+          <li class="wh-job">
+            <h3 class="wh-title">Advanced GHL Automation Specialist for Restaurants &amp; Service Businesses</h3>
+            <p class="wh-meta"><span class="stars" style="--rating:4" role="img" aria-label="4.0 out of 5"><i></i></span><span class="wh-score">4.0</span>
+              <span class="wh-sep">|</span>
+              <span>Mar 9, 2026 &ndash; Mar 13, 2026</span>
+            </p>
+          </li>
+
+          <li class="wh-job">
+            <h3 class="wh-title">Advanced GHL Automation Specialist for Restaurants &amp; Service Businesses</h3>
+            <p class="wh-meta"><span class="stars" style="--rating:4.5" role="img" aria-label="4.5 out of 5, from 2 reviews"><i></i></span><span class="wh-score">4.5</span>
+              <span>of 2 reviews</span>
+              <span class="wh-sep">|</span>
+              <span>Feb 9, 2026 &ndash; Mar 9, 2026</span>
+            </p>
+            <div class="wh-sub">
+              <p class="wh-meta" style="margin-top:0"><span class="stars" style="--rating:4" role="img" aria-label="4.0 out of 5"><i></i></span><span class="wh-score">4.0</span>
+              </p>
+            </div>
+          </li>
+        </ul>
+      </div>
+
+      <div id="wh-panel-live" role="tabpanel" aria-labelledby="wh-tab-live" tabindex="0" hidden>
+        <p class="wh-empty">One contract is currently in progress.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+/* Work-history tabs: roving tabindex and arrow keys, so the pair
+   behaves as one control rather than two lookalike buttons. */
+(function () {
+  var tabs = [].slice.call(document.querySelectorAll('.wh-tab'));
+  if (!tabs.length) return;
+  function select(tab) {
+    tabs.forEach(function (t) {
+      var on = t === tab;
+      t.setAttribute('aria-selected', String(on));
+      t.tabIndex = on ? 0 : -1;
+      document.getElementById(t.getAttribute('aria-controls')).hidden = !on;
+    });
+  }
+  tabs.forEach(function (tab, i) {
+    tab.addEventListener('click', function () { select(tab); });
+    tab.addEventListener('keydown', function (e) {
+      var d = e.key === 'ArrowRight' ? 1 : e.key === 'ArrowLeft' ? -1 : 0;
+      if (!d) return;
+      e.preventDefault();
+      var next = tabs[(i + d + tabs.length) % tabs.length];
+      select(next); next.focus();
+    });
+  });
+})();
+</script>
+
+<section class="section" id="method">
+  <div class="section-inner">
+    <div class="method-grid">
+
+      <div class="method-copy">
+        <p class="method-tag" data-inview>/ method</p>
+        <h2 data-inview style="--delay:60ms">Design meets automation</h2>
+        <ol class="steps">
+          <li class="step" data-inview style="--delay:0ms">
+            <span class="step-n">01</span>
+            <span class="step-b">
+              <h3>Strategy before automation</h3>
+              <p>I map the customer journey before the first screen gets designed.</p>
+            </span>
+          </li>
+          <li class="step" data-inview style="--delay:90ms">
+            <span class="step-n">02</span>
+            <span class="step-b">
+              <h3>Design and logic ship as one system</h3>
+              <p>The page and the automation behind it get built together, not bolted on after.</p>
+            </span>
+          </li>
+          <li class="step" data-inview style="--delay:180ms">
+            <span class="step-n">03</span>
+            <span class="step-b">
+              <h3>Nothing goes live untested</h3>
+              <p>Every trigger, tag and timing gets checked before launch.</p>
+            </span>
+          </li>
+        </ol>
+      </div>
+
+      <div class="lap-stage" data-inview style="--delay:120ms" aria-hidden="true">
+        <span class="lap-shadow"></span>
+        <div class="lap">
+
+          <div class="lid">
+            <span class="fc lid-front">
+              <span class="screen"><i style="--w:59%"></i><i style="--w:59%"></i><i style="--w:59%"></i><i style="--w:59%"></i><i style="--w:40%"></i><i style="--w:64%"></i></span>
+            </span>
+            <span class="fc lid-back"></span>
+            <span class="fc lid-l"></span>
+            <span class="fc lid-r"></span>
+            <span class="fc lid-t"></span>
+            <span class="fc lid-b"></span>
+          </div>
+
+          <div class="deck">
+            <span class="fc deck-top">
+              <span class="keys"><i style="--kd:2.18s;--ke:0.48s"></i><i style="--kd:2.77s;--ke:0.23s"></i><i style="--kd:2.56s;--ke:1.17s"></i><i style="--kd:1.70s;--ke:1.62s"></i><i style="--kd:1.67s;--ke:1.39s"></i><i style="--kd:1.73s;--ke:0.29s"></i><i style="--kd:2.36s;--ke:2.65s"></i><i style="--kd:1.82s;--ke:0.71s"></i><i style="--kd:2.73s;--ke:3.03s"></i><i style="--kd:2.64s;--ke:1.27s"></i><i style="--kd:3.36s;--ke:0.15s"></i><i style="--kd:3.15s;--ke:0.93s"></i><i style="--kd:1.86s;--ke:0.38s"></i><i style="--kd:2.16s;--ke:2.61s"></i><i style="--kd:1.93s;--ke:1.86s"></i><i style="--kd:2.75s;--ke:1.19s"></i><i style="--kd:2.59s;--ke:0.20s"></i><i style="--kd:1.71s;--ke:0.66s"></i><i style="--kd:2.82s;--ke:1.37s"></i><i style="--kd:2.17s;--ke:1.87s"></i><i style="--kd:2.42s;--ke:0.96s"></i><i style="--kd:3.03s;--ke:2.24s"></i><i style="--kd:2.04s;--ke:1.84s"></i><i style="--kd:2.55s;--ke:2.80s"></i><i style="--kd:2.91s;--ke:0.92s"></i><i style="--kd:3.36s;--ke:0.38s"></i><i style="--kd:2.35s;--ke:2.42s"></i><i style="--kd:1.87s;--ke:1.56s"></i><i style="--kd:1.67s;--ke:2.14s"></i><i style="--kd:2.98s;--ke:1.83s"></i><i style="--kd:3.18s;--ke:1.00s"></i><i style="--kd:2.85s;--ke:1.90s"></i><i style="--kd:2.64s;--ke:1.46s"></i><i style="--kd:3.11s;--ke:3.02s"></i><i style="--kd:2.45s;--ke:2.13s"></i><i style="--kd:1.71s;--ke:2.24s"></i><i style="--kd:2.76s;--ke:3.18s"></i><i style="--kd:3.08s;--ke:0.91s"></i><i style="--kd:2.29s;--ke:2.14s"></i><i style="--kd:1.64s;--ke:1.48s"></i><i style="--kd:1.90s;--ke:0.37s"></i><i style="--kd:1.71s;--ke:2.46s"></i><i style="--kd:1.83s;--ke:0.79s"></i><i style="--kd:2.30s;--ke:2.79s"></i><i style="--kd:1.75s;--ke:1.44s"></i><i style="--kd:2.59s;--ke:2.83s"></i><i style="--kd:3.07s;--ke:2.76s"></i><i style="--kd:2.10s;--ke:1.33s"></i><i style="--kd:2.25s;--ke:2.83s"></i><i style="--kd:3.32s;--ke:0.48s"></i><i style="--kd:1.92s;--ke:0.74s"></i><i style="--kd:2.02s;--ke:1.55s"></i><i style="--kd:2.66s;--ke:0.84s"></i><i style="--kd:1.61s;--ke:1.34s"></i><i style="--kd:2.26s;--ke:1.81s"></i><i style="--kd:3.32s;--ke:2.21s"></i><i style="--kd:2.53s;--ke:1.98s"></i><i style="--kd:2.82s;--ke:0.17s"></i><i style="--kd:3.22s;--ke:2.50s"></i><i style="--kd:3.17s;--ke:2.55s"></i></span>
+              <span class="pad"></span>
+            </span>
+            <span class="fc deck-bot"></span>
+            <span class="fc deck-l"></span>
+            <span class="fc deck-r"></span>
+            <span class="fc deck-front"></span>
+            <span class="fc deck-back"></span>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section class="section" id="beyond">
+  <div class="section-inner">
+    <div class="section-head">
+      <p class="method-tag" data-inview>/ about</p>
+      <h2 data-inview style="--delay:60ms">Beyond design</h2>
+    </div>
+
+    <div class="bd-list">
+        <div class="bd-row" data-inview style="--delay:0ms">
+          <div class="bd-copy">
+            <h3><span class="bd-n">01</span>Marathoner</h3>
+            <p>Not an elite, I just really like running. Sometimes I join marathons for fun, and even if I'm slow, finishing the race always makes me happy. It's my way to keep my body active.</p>
+          </div>
+          <div class="bd-media">
+            <picture>
+              <source srcset="beyond/marathoner.webp" type="image/webp" />
+              <img src="beyond/marathoner.jpg" alt="Chris running" loading="lazy" decoding="async" />
+            </picture>
+          </div>
+        </div>
+
+        <div class="bd-row" data-inview style="--delay:60ms">
+          <div class="bd-copy">
+            <h3><span class="bd-n">02</span>Photographer</h3>
+            <p>I carry a camera most places I go. Nothing serious&hellip; just views, people and something interesting.</p>
+          </div>
+          <div class="bd-media">
+            <picture>
+              <source srcset="beyond/photographer.webp" type="image/webp" />
+              <img src="beyond/photographer.jpg" alt="Chris with a camera" loading="lazy" decoding="async" />
+            </picture>
+          </div>
+        </div>
+
+        <div class="bd-row" data-inview style="--delay:120ms">
+          <div class="bd-copy">
+            <h3><span class="bd-n">03</span>Backpacker</h3>
+            <p>I like traveling and figuring things out as I go, from getting lost in new streets to eating whatever the locals recommend. Every trip reminds me how big the world is outside my work desk.</p>
+          </div>
+          <div class="bd-media">
+            <picture>
+              <source srcset="beyond/backpacker.webp" type="image/webp" />
+              <img src="beyond/backpacker.jpg" alt="Chris backpacking" loading="lazy" decoding="async" />
+            </picture>
+          </div>
+        </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="footer" id="contact">
+  <div class="footer-cta">
+    <h2 data-inview>Let's talk.</h2>
+    <div class="footer-actions" data-inview style="--delay:80ms">
+      <a class="pill pill--ghost" href="resume.pdf" target="_blank" rel="noopener">
+        Resume
+        <svg class="pill-ico" aria-hidden="true"><use href="#p-arrow-up-right"/></svg>
+        <span class="sr-only">(PDF, opens in a new tab)</span>
+      </a>
+      <a class="pill pill--solid" href="#selected">Work</a>
+    </div>
+
+    <div class="cal-wrap" data-inview style="--delay:160ms">
+      <!-- Mounted from script once the theme is known, so the widget
+           is built with matching colours instead of repainting. The
+           link below is what stays if Calendly never loads. -->
+      <div id="calendly" class="cal-embed">
+        <a class="pill pill--solid" href="https://calendly.com/chriscatipay24/30min"
+           target="_blank" rel="noopener">Book a 30 minute call</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-base">
+    <span class="footer-by">
+      <svg class="footer-mark" viewBox="0 0 100 100" fill="currentColor"
+           fill-rule="evenodd" aria-hidden="true"><path d="M21.71 24.20 L65.84 24.20 L65.30 25.09 L64.95 25.09 L62.81 27.22 L62.46 27.22 L60.32 29.36 L59.96 29.36 L57.12 32.21 L56.76 32.21 L54.27 34.70 L53.91 34.70 L51.42 37.19 L51.07 37.19 L48.58 39.68 L48.22 39.68 L45.73 42.17 L45.37 42.17 L43.24 44.31 L42.88 44.31 L35.05 51.42 L34.52 51.25 L34.52 41.28 L41.46 35.05 L41.81 35.05 L44.31 32.56 L44.66 32.56 L44.84 32.03 L29.72 31.85 L29.18 32.38 L29.18 70.46 L29.72 71.00 L56.05 71.00 L56.58 70.46 L54.80 66.90 L54.09 66.19 L53.02 64.06 L51.96 62.99 L51.60 61.92 L56.76 57.12 L57.47 57.12 L58.72 58.36 L58.72 58.72 L61.57 62.63 L64.41 68.33 L64.41 69.04 L65.84 71.89 L65.84 72.95 L66.19 73.31 L66.55 75.44 L66.90 75.80 L66.90 76.87 L67.26 77.22 L67.08 79.18 L21.89 79.18 L21.35 78.65 L21.35 24.56 L21.71 24.20Z"/><path d="M74.38 24.20 L80.96 24.02 L81.49 24.56 L81.49 78.65 L80.96 79.18 L73.49 79.18 L72.95 78.65 L72.24 74.73 L71.53 73.31 L71.53 72.24 L71.17 71.89 L70.46 69.04 L69.75 67.97 L69.75 67.26 L69.04 66.19 L69.04 65.48 L66.90 61.21 L65.12 58.72 L64.77 57.65 L61.57 53.38 L61.57 53.02 L64.23 50.36 L64.59 50.36 L66.73 48.22 L67.44 48.22 L69.75 50.89 L69.75 51.25 L72.60 55.16 L72.95 56.23 L73.67 56.23 L73.49 35.77 L73.13 35.77 L71.71 37.19 L71.35 37.19 L68.86 39.68 L68.51 39.68 L66.01 42.17 L65.66 42.17 L63.17 44.66 L62.81 44.66 L60.32 47.15 L59.96 47.15 L57.47 49.64 L57.12 49.64 L54.63 52.14 L54.27 52.14 L51.78 54.63 L51.42 54.63 L48.93 57.12 L48.58 57.12 L46.09 59.61 L45.73 59.61 L38.61 66.01 L35.05 66.01 L34.52 65.48 L34.52 59.07 L74.38 24.20Z"/></svg>
+      Designed and built by Chris
+    </span>
+    <span class="footer-copy">&copy; 2026 Chris Emmanuel Catipay</span>
+  </div>
+</footer>
+
+<script src="https://assets.calendly.com/assets/external/widget.js" id="calendlyJs" async></script>
+
+
+
+
+<script>
+(function () {
+  var root   = document.documentElement;
+  var reduce = window.matchMedia('(prefers-reduced-motion: reduce)');
+  var wavePeak = 0.85;   // refreshed on every theme change, below
+
+  /* ---- Theme -------------------------------------------------
+     Light is the default the site opens in. A visitor's own
+     choice is remembered and wins on the next visit; the system
+     setting is deliberately not followed.
+  ------------------------------------------------------------ */
+  var toggle = document.getElementById('themeToggle');
+  var stored = null;
+
+  try { stored = localStorage.getItem('theme'); } catch (e) {}
+
+  function apply(theme) {
+    root.setAttribute('data-theme', theme);
+    /* getComputedStyle forces a style flush, so it happens here
+       (twice a session) rather than inside the animation loop. */
+    wavePeak = parseFloat(
+      getComputedStyle(root).getPropertyValue('--wave-peak')) || 0.85;
+    var next = theme === 'dark' ? 'light' : 'dark';
+    toggle.setAttribute('aria-label', 'Switch to ' + next + ' theme');
+    toggle.setAttribute('aria-pressed', String(theme === 'dark'));
+  }
+
+  apply(stored === 'dark' ? 'dark' : 'light');
+
+  toggle.addEventListener('click', function () {
+    stored = root.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+    try { localStorage.setItem('theme', stored); } catch (e) {}
+    apply(stored);
+    calMount();
+  });
+
+  /* ---- Calendly ----------------------------------------------
+     Built from script rather than the auto-init markup, because
+     the colours have to be chosen before the widget renders and
+     the theme is not settled at parse time. Re-mounted on a theme
+     change, since an embedded iframe cannot inherit our tokens.
+  ------------------------------------------------------------ */
+  var CAL_URL = 'https://calendly.com/chriscatipay24/30min';
+  var calEl = document.getElementById('calendly');
+
+  function calMount() {
+    if (!calEl || !window.Calendly || !window.Calendly.initInlineWidget) return;
+    var dark = root.getAttribute('data-theme') === 'dark';
+    var q = dark
+      ? 'background_color=1d1d1d&text_color=f5f5f5&primary_color=3391df'
+      : 'background_color=ffffff&text_color=0d0d0d&primary_color=0261a1';
+    calEl.innerHTML = '';   // drops the fallback link
+    window.Calendly.initInlineWidget({
+      url: CAL_URL + '?hide_gdpr_banner=1&' + q,
+      parentElement: calEl
+    });
+  }
+
+  /* Calendly posts its content height from inside the iframe.
+     Adopting it means no inner scrollbar and no dead space, and
+     the origin check keeps other frames from resizing the page. */
+  if (calEl) {
+    window.addEventListener('message', function (e) {
+      if (typeof e.origin !== 'string' || e.origin.indexOf('calendly.com') === -1) return;
+      var d = e.data;
+      if (d && d.event === 'calendly.page_height' && d.payload && d.payload.height) {
+        calEl.style.height = d.payload.height;
+      }
+    });
+  }
+
+  if (calEl) {
+    var calJs = document.getElementById('calendlyJs');
+    if (window.Calendly) calMount();
+    else if (calJs) calJs.addEventListener('load', calMount, { once: true });
+  }
+
+  /* ---- Entrance ----------------------------------------------
+     Wait for the portrait so the face never pops in a beat after
+     the copy. Capped at 900ms so a slow image can't hold the page.
+  ------------------------------------------------------------ */
+  function start() { root.classList.add('is-ready'); }
+
+  var photo = document.querySelector('.portrait img');
+  if (photo && !photo.complete) {
+    var fired = false;
+    var go = function () { if (!fired) { fired = true; requestAnimationFrame(start); } };
+    photo.addEventListener('load',  go, { once: true });
+    photo.addEventListener('error', go, { once: true });
+    setTimeout(go, 900);
+  } else {
+    requestAnimationFrame(start);
+  }
+
+  /* ---- Tool cards: bend toward the cursor --------------------
+     One loop, not four. Only one card can be under the pointer
+     at a time, so a single piece of state follows whichever it
+     is and eases back to flat on the way out.
+  ------------------------------------------------------------ */
+  var fineP = window.matchMedia('(hover: hover) and (pointer: fine)');
+  var cards = document.querySelectorAll('.kit-card');
+
+  if (cards.length && fineP.matches && !reduce.matches) {
+    var KT = 8;          // degrees at the corner
+    var KL = -6;         // px the card rises while held
+    var k = { el: null, hot: false, tx: 0, ty: 0, tl: 0, cx: 0, cy: 0, cl: 0, raf: 0, on: false };
+
+    var kFrame = function () {
+      k.cx += (k.tx - k.cx) * 0.13;
+      k.cy += (k.ty - k.cy) * 0.13;
+      k.cl += (k.tl - k.cl) * 0.13;
+
+      if (k.el) {
+        k.el.style.setProperty('--kx', k.cx.toFixed(2) + 'deg');
+        k.el.style.setProperty('--ky', k.cy.toFixed(2) + 'deg');
+        k.el.style.setProperty('--klift', k.cl.toFixed(2) + 'px');
+      }
+
+      var settled = Math.abs(k.tx - k.cx) < 0.01 &&
+                    Math.abs(k.ty - k.cy) < 0.01 &&
+                    Math.abs(k.tl - k.cl) < 0.01;
+
+      if (!settled) {
+        k.raf = requestAnimationFrame(kFrame);
+      } else {
+        k.on = false;
+        /* Back at rest and no longer hovered: hand the inline
+           values back so the card is not stuck with stale props. */
+        if (!k.hot && k.el) {
+          k.el.style.removeProperty('--kx');
+          k.el.style.removeProperty('--ky');
+          k.el.style.removeProperty('--klift');
+          k.el = null;
+        }
+      }
+    };
+
+    var kKick = function () {
+      if (!k.on) { k.on = true; requestAnimationFrame(kFrame); }
+    };
+
+    Array.prototype.forEach.call(cards, function (card) {
+      card.addEventListener('pointerenter', function () {
+        k.el = card; k.hot = true; k.tl = KL; kKick();
+      });
+
+      card.addEventListener('pointermove', function (e) {
+        var r = card.getBoundingClientRect();
+        var dx = (e.clientX - (r.left + r.width / 2)) / (r.width / 2);
+        var dy = (e.clientY - (r.top + r.height / 2)) / (r.height / 2);
+        k.el = card;
+        k.ty = Math.max(-1, Math.min(1, dx)) * KT;
+        k.tx = -Math.max(-1, Math.min(1, dy)) * KT;
+        kKick();
+      }, { passive: true });
+
+      card.addEventListener('pointerleave', function () {
+        k.hot = false; k.tx = 0; k.ty = 0; k.tl = 0; kKick();
+      });
+    });
+  }
+
+
+  /* ---- Method: fold the laptop as the section passes ---------
+     Chromium animates --p from the scroll timeline in CSS. Other
+     engines get the same number from a rAF loop that an
+     IntersectionObserver switches off once the section is gone.
+     Either way every transform reads from --p, so scrolling back
+     up plays the identical animation in reverse for free.
+  ------------------------------------------------------------ */
+  var methodEl = document.getElementById('method');
+  var stageEl = methodEl && methodEl.querySelector('.lap-stage');
+
+  if (methodEl && stageEl && 'IntersectionObserver' in window) {
+    var typing = new IntersectionObserver(function (es) {
+      es.forEach(function (e) {
+        stageEl.classList.toggle('is-typing', e.isIntersecting);
+      });
+    }, { threshold: 0.1 });
+    typing.observe(methodEl);
+
+    var canTimeline = window.CSS && CSS.supports &&
+                      CSS.supports('animation-timeline', 'view()');
+
+    if (!canTimeline && !reduce.matches) {
+      var mRaf = 0, mOn = false;
+
+      var mTick = function () {
+        var r = methodEl.getBoundingClientRect();
+        var vh = window.innerHeight || 1;
+        // 0 while the section is still low on screen, 1 once it has risen past
+        var t = (vh * 0.75 - r.top) / (vh * 0.7);
+        stageEl.style.setProperty('--p', Math.min(1, Math.max(0, t)).toFixed(4));
+        if (mOn) mRaf = requestAnimationFrame(mTick);
+      };
+
+      new IntersectionObserver(function (es) {
+        es.forEach(function (e) {
+          if (e.isIntersecting && !mOn) { mOn = true; mTick(); }
+          else if (!e.isIntersecting && mOn) { mOn = false; cancelAnimationFrame(mRaf); }
+        });
+      }, { threshold: 0 }).observe(methodEl);
+    }
+  }
+
+  /* ---- Scroll reveal -----------------------------------------
+     IntersectionObserver, not a scroll listener: the listener
+     would run on every scroll frame to compute what the browser
+     already knows. Unobserve on entry so each element settles
+     once and never animates again on the way back up.
+  ------------------------------------------------------------ */
+  var below = document.querySelectorAll('[data-inview]');
+
+  if (!('IntersectionObserver' in window) || reduce.matches) {
+    // No observer or no appetite for motion: just show the content.
+    Array.prototype.forEach.call(below, function (el) {
+      el.classList.add('is-inview');
+    });
+  } else {
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (!entry.isIntersecting) return;
+        entry.target.classList.add('is-inview');
+        io.unobserve(entry.target);
+      });
+    }, { threshold: 0.15, rootMargin: '0px 0px -8% 0px' });
+
+    Array.prototype.forEach.call(below, function (el) { io.observe(el); });
+  }
+
+  /* ---- Hero portrait: scroll fade ----------------------------
+     Chromium runs this from CSS, off the main thread. Safari and
+     Firefox have no scroll-driven animations yet, so they get a
+     rAF loop instead - but one that an IntersectionObserver
+     switches off the moment the hero leaves the screen, so it
+     costs nothing for the rest of the page. Still not a scroll
+     listener, which would run whether or not anything needed it.
+  ------------------------------------------------------------ */
+  var veil = document.getElementById('portraitVeil');
+  var heroEl = document.querySelector('.hero');
+  var hasTimeline = window.CSS && CSS.supports &&
+                    CSS.supports('animation-timeline', 'view()');
+
+  if (veil && heroEl && !hasTimeline && !reduce.matches &&
+      'IntersectionObserver' in window) {
+    var vRaf = 0, vOn = false;
+
+    // Approximates the keyframes above: dip, spring, then go.
+    var vLerp = function (a, b, t) { return a + (b - a) * t; };
+
+    var vTick = function () {
+      var r = heroEl.getBoundingClientRect();
+      var travel = r.height * 0.34;
+      var past = -r.top - r.height * 0.04;
+      var t = travel > 0 ? Math.min(1, Math.max(0, past / travel)) : 0;
+
+      var y, o;
+      if (t < 0.3)        { y = vLerp(0, 10, t / 0.3);            o = 1; }
+      else if (t < 0.52)  { y = vLerp(10, -14, (t - 0.3) / 0.22); o = 1; }
+      else if (t < 0.84)  { y = vLerp(-14, -30, (t - 0.52) / 0.32);
+                            o = vLerp(0.97, 0.28, (t - 0.52) / 0.32); }
+      else                { y = vLerp(-30, -52, (t - 0.84) / 0.16);
+                            o = vLerp(0.28, 0, (t - 0.84) / 0.16); }
+
+      var s = vLerp(1, 0.87, t);
+      veil.style.opacity = o.toFixed(3);
+      veil.style.transform = 'translateY(' + y.toFixed(1) + 'px) scale(' + s.toFixed(4) + ')';
+      if (vOn) vRaf = requestAnimationFrame(vTick);
+    };
+
+    new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) {
+        if (e.isIntersecting && !vOn) {
+          vOn = true;
+          vTick();
+        } else if (!e.isIntersecting && vOn) {
+          vOn = false;
+          cancelAnimationFrame(vRaf);
+          veil.style.opacity = '0';
+          veil.style.transform = 'translateY(-52px) scale(.87)';
+        }
+      });
+    }, { threshold: 0 }).observe(heroEl);
+  }
+
+  /* ---- Portrait: follow, lift, shockwave ----------------------
+     Decorative, so it runs only on real pointers and only when
+     motion is welcome.
+
+     Every value eases toward a target each frame instead of
+     tracking the cursor directly. Tied straight to the pointer it
+     reads as mechanical; the lag is what makes it feel physical.
+
+     Only transform and opacity are ever touched, and the writes
+     land on one element - never a CSS variable on a parent, which
+     would restyle every child on every frame.
+  ------------------------------------------------------------ */
+  var wrap  = document.getElementById('portrait');
+  var inner = document.getElementById('portraitInner');
+  var field = document.getElementById('ripples');
+  var fine  = window.matchMedia('(hover: hover) and (pointer: fine)');
+
+  if (wrap && inner && field && fine.matches && !reduce.matches) {
+
+    var MAX_TILT  = 11;    // degrees at the far edge of the viewport
+    var MAX_PUSH  = 28;    // px the disc drifts toward the cursor
+    var POP_REST  = 1;
+    var POP_HOVER = 1.06;  // smaller than before - the disc is bigger now
+
+    var tTiltX = 0, tTiltY = 0, tPushX = 0, tPushY = 0, tPop = POP_REST;
+    var tiltX  = 0, tiltY  = 0, pushX  = 0, pushY  = 0, pop  = POP_REST;
+
+    var running = false;
+    var lastWave = 0;
+
+    /* Pool of rings, reused. Spawning nodes mid-gesture would
+       force layout on exactly the frames that need to stay cheap. */
+    var POOL = 7, pool = [], slot = 0;
+    for (var i = 0; i < POOL; i++) {
+      var r = document.createElement('span');
+      r.className = 'ripple';
+      field.appendChild(r);
+      pool.push(r);
+    }
+
+    function shockwave(strength) {
+      var ring = pool[slot];
+      slot = (slot + 1) % POOL;
+
+      // WAAPI: hardware accelerated, interruptible, no library.
+      ring.animate(
+        [
+          { transform: 'scale(0.99)', opacity: wavePeak * (0.6 + strength * 0.4) },
+          { transform: 'scale(1.22)', opacity: wavePeak * (0.5 + strength * 0.3), offset: 0.28 },
+          { transform: 'scale(1.85)', opacity: 0 }
+        ],
+        { duration: 1450, easing: 'cubic-bezier(0.23, 1, 0.32, 1)', fill: 'forwards' }
+      );
+    }
+
+    function frame() {
+      var pxPrev = pushX, pyPrev = pushY;
+
+      tiltX += (tTiltX - tiltX) * 0.085;
+      tiltY += (tTiltY - tiltY) * 0.085;
+      pushX += (tPushX - pushX) * 0.085;
+      pushY += (tPushY - pushY) * 0.085;
+      pop   += (tPop   - pop)   * 0.12;
+
+      inner.style.setProperty('--tilt-x', tiltX.toFixed(3) + 'deg');
+      inner.style.setProperty('--tilt-y', tiltY.toFixed(3) + 'deg');
+      inner.style.setProperty('--push-x', pushX.toFixed(2) + 'px');
+      inner.style.setProperty('--push-y', pushY.toFixed(2) + 'px');
+      inner.style.setProperty('--pop',    pop.toFixed(4));
+
+      /* Waves come off the disc's own movement, not the cursor's,
+         so they fire when the image actually travels. */
+      var speed = Math.hypot(pushX - pxPrev, pushY - pyPrev);
+      var now   = performance.now();
+      if (speed > 0.14 && now - lastWave > 165) {
+        lastWave = now;
+        shockwave(Math.min(speed / 1.6, 1));
+      }
+
+      var settled =
+        Math.abs(tTiltX - tiltX) < 0.01 && Math.abs(tTiltY - tiltY) < 0.01 &&
+        Math.abs(tPushX - pushX) < 0.01 && Math.abs(tPushY - pushY) < 0.01 &&
+        Math.abs(tPop   - pop)   < 0.0005;
+
+      if (settled) { running = false; } else { requestAnimationFrame(frame); }
+    }
+
+    function kick() {
+      if (!running) { running = true; requestAnimationFrame(frame); }
+    }
+
+    window.addEventListener('pointermove', function (e) {
+      var r  = inner.getBoundingClientRect();
+      var dx = (e.clientX - (r.left + r.width  / 2)) / (window.innerWidth  / 2);
+      var dy = (e.clientY - (r.top  + r.height / 2)) / (window.innerHeight / 2);
+
+      dx = Math.max(-1, Math.min(1, dx));
+      dy = Math.max(-1, Math.min(1, dy));
+
+      tTiltY =  dx * MAX_TILT;   // cursor right -> right edge recedes
+      tTiltX = -dy * MAX_TILT;
+      tPushX =  dx * MAX_PUSH;   // and the whole disc leans that way
+      tPushY =  dy * MAX_PUSH;
+      kick();
+    }, { passive: true });
+
+    inner.addEventListener('pointerenter', function () {
+      tPop = POP_HOVER;
+      wrap.classList.add('is-lifted');
+      kick();
+    });
+    inner.addEventListener('pointerleave', function () {
+      tPop = POP_REST;
+      wrap.classList.remove('is-lifted');
+      kick();
+    });
+
+    document.addEventListener('pointerleave', function () {
+      tTiltX = tTiltY = tPushX = tPushY = 0;
+      tPop = POP_REST;
+      wrap.classList.remove('is-lifted');
+      kick();
+    });
+
+    /* A rect cached mid-gesture would go stale on resize. */
+    window.addEventListener('resize', kick, { passive: true });
+  }
+})();
+</script>
+</body>
+</html>

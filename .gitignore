@@ -1,0 +1,32 @@
+# The project root doubles as a working folder: raw mockups, client
+# source art, design comps and reference screenshots all live here and
+# are not part of the site. So ignore the root by default and opt the
+# shipped files back in, rather than chasing new scratch files later.
+/*
+
+!.gitignore
+!README.md
+
+# --- the site -------------------------------------------------------
+!index.html
+!preview.cmd
+!resume.pdf
+
+# images referenced by index.html
+!og-image.jpg
+!profile-600.jpg
+!profile-600.webp
+!work/
+!beyond/
+!logos/
+
+# favicons and app icons
+!favicon.ico
+!favicon-16x16.png
+!favicon-32x32.png
+!apple-touch-icon.png
+!icon-192.png
+!icon-512.png
+
+# --- the deploy folder dragged to Netlify ---------------------------
+!dist/
