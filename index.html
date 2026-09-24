@@ -1535,6 +1535,79 @@ h1 .accent { color: var(--accent); }
   .ws-grid figure:hover .ws-media { transform: none; }
 }
 
+/* ---- lightbox ------------------------------------------------------
+   The cards carry a crop for legibility, so the full capture has to be
+   reachable. Opens the whole original, sized to fit the viewport. */
+.ws-open {
+  display: block;
+  width: 100%;
+  padding: 0;
+  border: 0;
+  background: none;
+  font: inherit;
+  color: inherit;
+  text-align: left;
+  cursor: zoom-in;
+}
+.ws-open:focus-visible { outline: none; }
+.ws-open:focus-visible .ws-media { outline: 2px solid var(--focus); outline-offset: 3px; }
+
+.lb { position: fixed; inset: 0; z-index: 110; }
+.lb[hidden] { display: none; }
+.lb-backdrop {
+  position: absolute;
+  inset: 0;
+  background: oklch(12% 0 247.5 / .82);
+  -webkit-backdrop-filter: blur(4px);
+          backdrop-filter: blur(4px);
+}
+.lb-fig {
+  position: absolute;
+  inset: 0;
+  margin: 0;
+  display: grid;
+  grid-template-rows: 1fr auto;
+  gap: 14px;
+  place-items: center;
+  padding: clamp(46px, 7vh, 72px) clamp(14px, 4vw, 56px) clamp(20px, 4vh, 40px);
+  pointer-events: none;
+}
+.lb-fig img {
+  max-width: 100%;
+  max-height: 100%;
+  width: auto;
+  height: auto;
+  display: block;
+  border-radius: 10px;
+  box-shadow: 0 30px 80px oklch(0% 0 0 / .5);
+  pointer-events: auto;
+}
+.lb-cap {
+  font-size: 13.5px;
+  color: oklch(88% 0 247.5);
+  text-align: center;
+  pointer-events: auto;
+}
+.lb-close {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  z-index: 2;
+  width: 40px;
+  height: 40px;
+  display: grid;
+  place-items: center;
+  border: 1px solid oklch(100% 0 0 / .25);
+  border-radius: 50%;
+  background: oklch(100% 0 0 / .1);
+  color: #fff;
+  cursor: pointer;
+  transition: background-color 180ms ease, transform 160ms var(--ease-out);
+}
+.lb-close:hover { background: oklch(100% 0 0 / .2); }
+.lb-close:active { transform: scale(.94); }
+.lb-close svg { width: 17px; height: 17px; display: block; }
+
 /* ============================================================
    FOOTER
    Carries id="contact", so the nav's Book a call resolves here
@@ -2134,39 +2207,48 @@ h1 .accent { color: var(--accent); }
     </div>
     <ul class="ws-grid">
       <li data-inview style="--delay:0ms">
-        <figure>
-          <div class="ws-media">
-            <picture>
-              <source srcset="station/desk.webp" type="image/webp" />
-              <img src="station/desk.jpg" alt="Chris's desk: dual-monitor setup" loading="lazy" decoding="async" />
-            </picture>
-          </div>
-          <figcaption class="ws-cap">Dual-monitor desk setup</figcaption>
+        <button class="ws-open" type="button" aria-haspopup="dialog"
+                data-full="station/desk-full.jpg" data-cap="Dual-monitor desk setup">
+          <figure>
+          <div class="ws-media">
+            <picture>
+              <source srcset="station/desk.webp" type="image/webp" />
+              <img src="station/desk.jpg" alt="Chris's desk: dual-monitor setup" loading="lazy" decoding="async" />
+            </picture>
+          </div>
+          <figcaption class="ws-cap">Dual-monitor desk setup</figcaption>
         </figure>
+        </button>
       </li>
 
       <li data-inview style="--delay:70ms">
-        <figure>
-          <div class="ws-media">
-            <picture>
-              <source srcset="station/specs.webp" type="image/webp" />
-              <img src="station/specs.jpg" alt="Windows system specifications: 32 GB RAM, Intel Core i5-9400F, NVIDIA GTX 1660 SUPER, 1.38 TB storage" loading="lazy" decoding="async" />
-            </picture>
-          </div>
-          <figcaption class="ws-cap">32&nbsp;GB RAM &middot; i5-9400F &middot; GTX 1660 SUPER</figcaption>
+        <button class="ws-open" type="button" aria-haspopup="dialog"
+                data-full="station/specs-full.jpg" data-cap="32&nbsp;GB RAM &middot; i5-9400F &middot; GTX 1660 SUPER">
+          <figure>
+          <div class="ws-media">
+            <picture>
+              <source srcset="station/specs.webp" type="image/webp" />
+              <img src="station/specs.jpg" alt="Windows system specifications: 32 GB RAM, Intel Core i5-9400F, NVIDIA GTX 1660 SUPER, 1.38 TB storage" loading="lazy" decoding="async" />
+            </picture>
+          </div>
+          <figcaption class="ws-cap">32&nbsp;GB RAM &middot; i5-9400F &middot; GTX 1660 SUPER</figcaption>
         </figure>
+        </button>
       </li>
 
       <li data-inview style="--delay:140ms">
-        <figure>
-          <div class="ws-media">
-            <picture>
-              <source srcset="station/speed.webp" type="image/webp" />
-              <img src="station/speed.jpg" alt="Speedtest result: 199.21 Mbps download, 317.14 Mbps upload, 43 ms ping on PLDT Home Fiber" loading="lazy" decoding="async" />
-            </picture>
-          </div>
-          <figcaption class="ws-cap">199&nbsp;Mbps down &middot; 317&nbsp;Mbps up &middot; PLDT Home Fiber</figcaption>
+        <button class="ws-open" type="button" aria-haspopup="dialog"
+                data-full="station/speed-full.jpg" data-cap="199&nbsp;Mbps down &middot; 317&nbsp;Mbps up &middot; PLDT Home Fiber">
+          <figure>
+          <div class="ws-media">
+            <picture>
+              <source srcset="station/speed.webp" type="image/webp" />
+              <img src="station/speed.jpg" alt="Speedtest result: 199.21 Mbps download, 317.14 Mbps upload, 43 ms ping on PLDT Home Fiber" loading="lazy" decoding="async" />
+            </picture>
+          </div>
+          <figcaption class="ws-cap">199&nbsp;Mbps down &middot; 317&nbsp;Mbps up &middot; PLDT Home Fiber</figcaption>
         </figure>
+        </button>
       </li>
     </ul>
   </div>
@@ -2481,6 +2563,61 @@ h1 .accent { color: var(--accent); }
     var first = f[0], last = f[f.length - 1];
     if (e.shiftKey && document.activeElement === first) { e.preventDefault(); last.focus(); }
     else if (!e.shiftKey && document.activeElement === last) { e.preventDefault(); first.focus(); }
+  });
+})();
+</script>
+
+<div class="lb" id="lightbox" hidden>
+  <div class="lb-backdrop" data-lb-close></div>
+  <button class="lb-close" type="button" data-lb-close aria-label="Close image">
+    <svg viewBox="0 0 256 256" fill="currentColor" aria-hidden="true"><path d="M205.66 194.34a8 8 0 0 1-11.32 11.32L128 139.31l-66.34 66.35a8 8 0 0 1-11.32-11.32L116.69 128 50.34 61.66a8 8 0 0 1 11.32-11.32L128 116.69l66.34-66.35a8 8 0 0 1 11.32 11.32L139.31 128Z"/></svg>
+  </button>
+  <figure class="lb-fig" role="dialog" aria-modal="true" aria-label="Full size image">
+    <img id="lbImg" src="" alt="" />
+    <figcaption class="lb-cap" id="lbCap"></figcaption>
+  </figure>
+</div>
+
+<script>
+/* Work-station lightbox: opens the full capture the card crops. */
+(function () {
+  var lb  = document.getElementById('lightbox');
+  var img = document.getElementById('lbImg');
+  var cap = document.getElementById('lbCap');
+  if (!lb) return;
+  var opener = null;
+
+  function open(btn) {
+    var inner = btn.querySelector('.ws-media img');
+    img.src = btn.getAttribute('data-full');
+    img.alt = inner ? inner.alt : '';
+    cap.innerHTML = btn.getAttribute('data-cap') || '';
+    opener = btn;
+    var gap = window.innerWidth - document.documentElement.clientWidth;
+    document.body.style.overflow = 'hidden';
+    if (gap > 0) document.body.style.paddingRight = gap + 'px';
+    lb.hidden = false;
+    lb.querySelector('.lb-close').focus();
+  }
+  function close() {
+    lb.hidden = true;
+    img.src = '';
+    document.body.style.overflow = '';
+    document.body.style.paddingRight = '';
+    if (opener) { opener.focus(); opener = null; }
+  }
+
+  document.querySelectorAll('.ws-open').forEach(function (btn) {
+    btn.addEventListener('click', function () { open(btn); });
+  });
+  lb.addEventListener('click', function (e) {
+    if (e.target.closest('[data-lb-close]')) close();
+  });
+  document.addEventListener('keydown', function (e) {
+    if (lb.hidden) return;
+    if (e.key === 'Escape') { e.preventDefault(); close(); }
+    /* Only the close button is focusable in here, so keep Tab on it. */
+    else if (e.key === 'Tab') { e.preventDefault(); lb.querySelector('.lb-close').focus(); }
   });
 })();
 </script>
