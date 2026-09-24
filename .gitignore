@@ -5,6 +5,7 @@
 /*
 
 !.gitignore
+!.vercelignore
 !README.md
 !vercel.json
 
@@ -31,3 +32,7 @@
 
 # --- the deploy folder dragged to Netlify ---------------------------
 !dist/
+# CLI deploys run from dist/, which drops its own link file there.
+dist/.vercel/
+
+.vercel
