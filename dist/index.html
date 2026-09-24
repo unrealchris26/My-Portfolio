@@ -1496,6 +1496,46 @@ h1 .accent { color: var(--accent); }
 }
 
 /* ============================================================
+   WORK STATION
+   Three landscape frames at one size. These are evidence for a
+   remote client - machine, connection, desk - so they read as a
+   set rather than one hero shot with two thumbnails.
+   ============================================================ */
+.ws-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: clamp(16px, 2.2vw, 28px);
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.ws-grid figure { margin: 0; }
+.ws-media {
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  border-radius: var(--r-surface);
+  border: 1px solid var(--border);
+  background: var(--bg-alt);
+  box-shadow: var(--shadow-card);
+  transition: transform 420ms var(--ease-out), box-shadow 420ms var(--ease-out);
+}
+.ws-media img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.ws-cap {
+  margin-top: 12px;
+  font-size: 13.5px;
+  line-height: 1.5;
+  color: var(--fg-subtle);
+}
+@media (hover: hover) and (pointer: fine) {
+  .ws-grid figure:hover .ws-media { transform: translateY(-4px); box-shadow: var(--shadow-photo-lift); }
+}
+/* Two columns would strand the third frame on its own row. */
+@media (max-width: 760px) { .ws-grid { grid-template-columns: minmax(0, 1fr); } }
+@media (prefers-reduced-motion: reduce) {
+  .ws-grid figure:hover .ws-media { transform: none; }
+}
+
+/* ============================================================
    FOOTER
    Carries id="contact", so the nav's Book a call resolves here
    instead of pointing at a section that no longer exists.
@@ -2083,6 +2123,52 @@ h1 .accent { color: var(--accent); }
           </div>
         </div>
     </div>
+  </div>
+</section>
+
+<section class="section" id="station">
+  <div class="section-inner">
+    <div class="section-head">
+      <p class="method-tag" data-inview>/ setup</p>
+      <h2 data-inview style="--delay:60ms">Work Station</h2>
+    </div>
+    <ul class="ws-grid">
+      <li data-inview style="--delay:0ms">
+        <figure>
+          <div class="ws-media">
+            <picture>
+              <source srcset="station/desk.webp" type="image/webp" />
+              <img src="station/desk.jpg" alt="Chris's desk: dual-monitor setup" loading="lazy" decoding="async" />
+            </picture>
+          </div>
+          <figcaption class="ws-cap">Dual-monitor desk setup</figcaption>
+        </figure>
+      </li>
+
+      <li data-inview style="--delay:70ms">
+        <figure>
+          <div class="ws-media">
+            <picture>
+              <source srcset="station/specs.webp" type="image/webp" />
+              <img src="station/specs.jpg" alt="Windows system specifications: 32 GB RAM, Intel Core i5-9400F, NVIDIA GTX 1660 SUPER, 1.38 TB storage" loading="lazy" decoding="async" />
+            </picture>
+          </div>
+          <figcaption class="ws-cap">32&nbsp;GB RAM &middot; i5-9400F &middot; GTX 1660 SUPER</figcaption>
+        </figure>
+      </li>
+
+      <li data-inview style="--delay:140ms">
+        <figure>
+          <div class="ws-media">
+            <picture>
+              <source srcset="station/speed.webp" type="image/webp" />
+              <img src="station/speed.jpg" alt="Speedtest result: 199.21 Mbps download, 317.14 Mbps upload, 43 ms ping on PLDT Home Fiber" loading="lazy" decoding="async" />
+            </picture>
+          </div>
+          <figcaption class="ws-cap">199&nbsp;Mbps down &middot; 317&nbsp;Mbps up &middot; PLDT Home Fiber</figcaption>
+        </figure>
+      </li>
+    </ul>
   </div>
 </section>
 
