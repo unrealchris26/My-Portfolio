@@ -1347,6 +1347,38 @@ h1 .accent { color: var(--accent); }
 }
 .wh-empty { margin: 26px 0 0; font-size: 15px; color: var(--fg-muted); }
 
+/* Skill tags. A plain wrapped list: the row breaks fall wherever the
+   width puts them, so no tag is ever orphaned or truncated. */
+.wh-skills {
+  margin-top: clamp(30px, 4vh, 44px);
+  padding-top: clamp(26px, 3.5vh, 36px);
+  border-top: 1px solid var(--border);
+}
+.wh-skills h3 {
+  margin: 0 0 16px;
+  font-size: clamp(1.0625rem, 1.5vw, 1.25rem);
+  font-weight: 700;
+  letter-spacing: -.015em;
+}
+.tag-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 9px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.tag {
+  display: inline-block;
+  padding: 7px 13px;
+  border-radius: 6px;
+  background: var(--bg-alt);
+  font-size: 13.5px;
+  font-weight: 500;
+  line-height: 1.3;
+  color: var(--fg-muted);
+}
+
 /* Five stars painted once and filled to the score, so a half star
    needs no second glyph. The mask clips both layers together. */
 .stars {
@@ -1685,6 +1717,72 @@ h1 .accent { color: var(--accent); }
   </div>
 </section>
 
+<section class="section" id="method">
+  <div class="section-inner">
+    <div class="method-grid">
+
+      <div class="method-copy">
+        <p class="method-tag" data-inview>/ method</p>
+        <h2 data-inview style="--delay:60ms">Design meets automation</h2>
+        <ol class="steps">
+          <li class="step" data-inview style="--delay:0ms">
+            <span class="step-n">01</span>
+            <span class="step-b">
+              <h3>Strategy before automation</h3>
+              <p>I map the customer journey before the first screen gets designed.</p>
+            </span>
+          </li>
+          <li class="step" data-inview style="--delay:90ms">
+            <span class="step-n">02</span>
+            <span class="step-b">
+              <h3>Design and logic ship as one system</h3>
+              <p>The page and the automation behind it get built together, not bolted on after.</p>
+            </span>
+          </li>
+          <li class="step" data-inview style="--delay:180ms">
+            <span class="step-n">03</span>
+            <span class="step-b">
+              <h3>Nothing goes live untested</h3>
+              <p>Every trigger, tag and timing gets checked before launch.</p>
+            </span>
+          </li>
+        </ol>
+      </div>
+
+      <div class="lap-stage" data-inview style="--delay:120ms" aria-hidden="true">
+        <span class="lap-shadow"></span>
+        <div class="lap">
+
+          <div class="lid">
+            <span class="fc lid-front">
+              <span class="screen"><i style="--w:59%"></i><i style="--w:59%"></i><i style="--w:59%"></i><i style="--w:59%"></i><i style="--w:40%"></i><i style="--w:64%"></i></span>
+            </span>
+            <span class="fc lid-back"></span>
+            <span class="fc lid-l"></span>
+            <span class="fc lid-r"></span>
+            <span class="fc lid-t"></span>
+            <span class="fc lid-b"></span>
+          </div>
+
+          <div class="deck">
+            <span class="fc deck-top">
+              <span class="keys"><i style="--kd:2.18s;--ke:0.48s"></i><i style="--kd:2.77s;--ke:0.23s"></i><i style="--kd:2.56s;--ke:1.17s"></i><i style="--kd:1.70s;--ke:1.62s"></i><i style="--kd:1.67s;--ke:1.39s"></i><i style="--kd:1.73s;--ke:0.29s"></i><i style="--kd:2.36s;--ke:2.65s"></i><i style="--kd:1.82s;--ke:0.71s"></i><i style="--kd:2.73s;--ke:3.03s"></i><i style="--kd:2.64s;--ke:1.27s"></i><i style="--kd:3.36s;--ke:0.15s"></i><i style="--kd:3.15s;--ke:0.93s"></i><i style="--kd:1.86s;--ke:0.38s"></i><i style="--kd:2.16s;--ke:2.61s"></i><i style="--kd:1.93s;--ke:1.86s"></i><i style="--kd:2.75s;--ke:1.19s"></i><i style="--kd:2.59s;--ke:0.20s"></i><i style="--kd:1.71s;--ke:0.66s"></i><i style="--kd:2.82s;--ke:1.37s"></i><i style="--kd:2.17s;--ke:1.87s"></i><i style="--kd:2.42s;--ke:0.96s"></i><i style="--kd:3.03s;--ke:2.24s"></i><i style="--kd:2.04s;--ke:1.84s"></i><i style="--kd:2.55s;--ke:2.80s"></i><i style="--kd:2.91s;--ke:0.92s"></i><i style="--kd:3.36s;--ke:0.38s"></i><i style="--kd:2.35s;--ke:2.42s"></i><i style="--kd:1.87s;--ke:1.56s"></i><i style="--kd:1.67s;--ke:2.14s"></i><i style="--kd:2.98s;--ke:1.83s"></i><i style="--kd:3.18s;--ke:1.00s"></i><i style="--kd:2.85s;--ke:1.90s"></i><i style="--kd:2.64s;--ke:1.46s"></i><i style="--kd:3.11s;--ke:3.02s"></i><i style="--kd:2.45s;--ke:2.13s"></i><i style="--kd:1.71s;--ke:2.24s"></i><i style="--kd:2.76s;--ke:3.18s"></i><i style="--kd:3.08s;--ke:0.91s"></i><i style="--kd:2.29s;--ke:2.14s"></i><i style="--kd:1.64s;--ke:1.48s"></i><i style="--kd:1.90s;--ke:0.37s"></i><i style="--kd:1.71s;--ke:2.46s"></i><i style="--kd:1.83s;--ke:0.79s"></i><i style="--kd:2.30s;--ke:2.79s"></i><i style="--kd:1.75s;--ke:1.44s"></i><i style="--kd:2.59s;--ke:2.83s"></i><i style="--kd:3.07s;--ke:2.76s"></i><i style="--kd:2.10s;--ke:1.33s"></i><i style="--kd:2.25s;--ke:2.83s"></i><i style="--kd:3.32s;--ke:0.48s"></i><i style="--kd:1.92s;--ke:0.74s"></i><i style="--kd:2.02s;--ke:1.55s"></i><i style="--kd:2.66s;--ke:0.84s"></i><i style="--kd:1.61s;--ke:1.34s"></i><i style="--kd:2.26s;--ke:1.81s"></i><i style="--kd:3.32s;--ke:2.21s"></i><i style="--kd:2.53s;--ke:1.98s"></i><i style="--kd:2.82s;--ke:0.17s"></i><i style="--kd:3.22s;--ke:2.50s"></i><i style="--kd:3.17s;--ke:2.55s"></i></span>
+              <span class="pad"></span>
+            </span>
+            <span class="fc deck-bot"></span>
+            <span class="fc deck-l"></span>
+            <span class="fc deck-r"></span>
+            <span class="fc deck-front"></span>
+            <span class="fc deck-back"></span>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
 <section class="section" id="selected">
   <div class="section-inner">
     <div class="section-head">
@@ -1878,6 +1976,33 @@ h1 .accent { color: var(--accent); }
         <p class="wh-empty">One contract is currently in progress.</p>
       </div>
     </div>
+
+    <div class="wh-skills" data-inview style="--delay:180ms">
+      <h3>Skills</h3>
+      <ul class="tag-list">
+          <li class="tag">HighLevel</li>
+          <li class="tag">Automation</li>
+          <li class="tag">Marketing Automation</li>
+          <li class="tag">CRM Software</li>
+          <li class="tag">CRM Automation</li>
+          <li class="tag">Technical Support</li>
+          <li class="tag">Lead Generation</li>
+          <li class="tag">Lead Management Automation</li>
+          <li class="tag">Advertising Automation</li>
+          <li class="tag">Web Development</li>
+          <li class="tag">Virtual Assistance</li>
+          <li class="tag">Zapier</li>
+          <li class="tag">Email Automation</li>
+          <li class="tag">CRM Development</li>
+          <li class="tag">Marketing Strategy</li>
+          <li class="tag">Social Media Marketing</li>
+          <li class="tag">Facebook</li>
+          <li class="tag">Marketing Operations &amp; Workflow</li>
+          <li class="tag">B2B Marketing</li>
+          <li class="tag">Automated Workflow</li>
+          <li class="tag">Clear Communicator</li>
+      </ul>
+    </div>
   </div>
 </section>
 
@@ -1907,72 +2032,6 @@ h1 .accent { color: var(--accent); }
   });
 })();
 </script>
-
-<section class="section" id="method">
-  <div class="section-inner">
-    <div class="method-grid">
-
-      <div class="method-copy">
-        <p class="method-tag" data-inview>/ method</p>
-        <h2 data-inview style="--delay:60ms">Design meets automation</h2>
-        <ol class="steps">
-          <li class="step" data-inview style="--delay:0ms">
-            <span class="step-n">01</span>
-            <span class="step-b">
-              <h3>Strategy before automation</h3>
-              <p>I map the customer journey before the first screen gets designed.</p>
-            </span>
-          </li>
-          <li class="step" data-inview style="--delay:90ms">
-            <span class="step-n">02</span>
-            <span class="step-b">
-              <h3>Design and logic ship as one system</h3>
-              <p>The page and the automation behind it get built together, not bolted on after.</p>
-            </span>
-          </li>
-          <li class="step" data-inview style="--delay:180ms">
-            <span class="step-n">03</span>
-            <span class="step-b">
-              <h3>Nothing goes live untested</h3>
-              <p>Every trigger, tag and timing gets checked before launch.</p>
-            </span>
-          </li>
-        </ol>
-      </div>
-
-      <div class="lap-stage" data-inview style="--delay:120ms" aria-hidden="true">
-        <span class="lap-shadow"></span>
-        <div class="lap">
-
-          <div class="lid">
-            <span class="fc lid-front">
-              <span class="screen"><i style="--w:59%"></i><i style="--w:59%"></i><i style="--w:59%"></i><i style="--w:59%"></i><i style="--w:40%"></i><i style="--w:64%"></i></span>
-            </span>
-            <span class="fc lid-back"></span>
-            <span class="fc lid-l"></span>
-            <span class="fc lid-r"></span>
-            <span class="fc lid-t"></span>
-            <span class="fc lid-b"></span>
-          </div>
-
-          <div class="deck">
-            <span class="fc deck-top">
-              <span class="keys"><i style="--kd:2.18s;--ke:0.48s"></i><i style="--kd:2.77s;--ke:0.23s"></i><i style="--kd:2.56s;--ke:1.17s"></i><i style="--kd:1.70s;--ke:1.62s"></i><i style="--kd:1.67s;--ke:1.39s"></i><i style="--kd:1.73s;--ke:0.29s"></i><i style="--kd:2.36s;--ke:2.65s"></i><i style="--kd:1.82s;--ke:0.71s"></i><i style="--kd:2.73s;--ke:3.03s"></i><i style="--kd:2.64s;--ke:1.27s"></i><i style="--kd:3.36s;--ke:0.15s"></i><i style="--kd:3.15s;--ke:0.93s"></i><i style="--kd:1.86s;--ke:0.38s"></i><i style="--kd:2.16s;--ke:2.61s"></i><i style="--kd:1.93s;--ke:1.86s"></i><i style="--kd:2.75s;--ke:1.19s"></i><i style="--kd:2.59s;--ke:0.20s"></i><i style="--kd:1.71s;--ke:0.66s"></i><i style="--kd:2.82s;--ke:1.37s"></i><i style="--kd:2.17s;--ke:1.87s"></i><i style="--kd:2.42s;--ke:0.96s"></i><i style="--kd:3.03s;--ke:2.24s"></i><i style="--kd:2.04s;--ke:1.84s"></i><i style="--kd:2.55s;--ke:2.80s"></i><i style="--kd:2.91s;--ke:0.92s"></i><i style="--kd:3.36s;--ke:0.38s"></i><i style="--kd:2.35s;--ke:2.42s"></i><i style="--kd:1.87s;--ke:1.56s"></i><i style="--kd:1.67s;--ke:2.14s"></i><i style="--kd:2.98s;--ke:1.83s"></i><i style="--kd:3.18s;--ke:1.00s"></i><i style="--kd:2.85s;--ke:1.90s"></i><i style="--kd:2.64s;--ke:1.46s"></i><i style="--kd:3.11s;--ke:3.02s"></i><i style="--kd:2.45s;--ke:2.13s"></i><i style="--kd:1.71s;--ke:2.24s"></i><i style="--kd:2.76s;--ke:3.18s"></i><i style="--kd:3.08s;--ke:0.91s"></i><i style="--kd:2.29s;--ke:2.14s"></i><i style="--kd:1.64s;--ke:1.48s"></i><i style="--kd:1.90s;--ke:0.37s"></i><i style="--kd:1.71s;--ke:2.46s"></i><i style="--kd:1.83s;--ke:0.79s"></i><i style="--kd:2.30s;--ke:2.79s"></i><i style="--kd:1.75s;--ke:1.44s"></i><i style="--kd:2.59s;--ke:2.83s"></i><i style="--kd:3.07s;--ke:2.76s"></i><i style="--kd:2.10s;--ke:1.33s"></i><i style="--kd:2.25s;--ke:2.83s"></i><i style="--kd:3.32s;--ke:0.48s"></i><i style="--kd:1.92s;--ke:0.74s"></i><i style="--kd:2.02s;--ke:1.55s"></i><i style="--kd:2.66s;--ke:0.84s"></i><i style="--kd:1.61s;--ke:1.34s"></i><i style="--kd:2.26s;--ke:1.81s"></i><i style="--kd:3.32s;--ke:2.21s"></i><i style="--kd:2.53s;--ke:1.98s"></i><i style="--kd:2.82s;--ke:0.17s"></i><i style="--kd:3.22s;--ke:2.50s"></i><i style="--kd:3.17s;--ke:2.55s"></i></span>
-              <span class="pad"></span>
-            </span>
-            <span class="fc deck-bot"></span>
-            <span class="fc deck-l"></span>
-            <span class="fc deck-r"></span>
-            <span class="fc deck-front"></span>
-            <span class="fc deck-back"></span>
-          </div>
-
-        </div>
-      </div>
-
-    </div>
-  </div>
-</section>
 
 <section class="section" id="beyond">
   <div class="section-inner">
