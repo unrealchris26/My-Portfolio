@@ -868,6 +868,11 @@ h1 .accent { color: var(--accent); }
 }
 .pf-card:focus-visible { outline: none; }
 .pf-card:focus-visible .pf-media { outline: 2px solid var(--focus); outline-offset: 3px; }
+/* Cards with no detail panel behind them: no pointer, no lift, no
+   colour shift - nothing that reads as "this does something". */
+.pf-card--static { cursor: default; }
+.pf-card--static:hover .pf-media { transform: none; box-shadow: none; }
+.pf-card--static:hover .pf-title { color: inherit; }
 
 /* ---- detail panel -------------------------------------------------
    Rendered from markup already in the page rather than built in JS,
@@ -2003,7 +2008,7 @@ h1 .accent { color: var(--accent); }
     <h3 class="pf-group" data-inview>Websites &amp; Landing Pages</h3>
     <ul class="pf-grid">
         <li class="pf-item" data-inview style="--delay:0ms">
-          <button class="pf-card" type="button" data-project="magician-site" aria-haspopup="dialog">
+          <div class="pf-card pf-card--static">
             <span class="pf-media">
               <picture>
                 <source srcset="projects/magician-site/thumb.webp" type="image/webp" />
@@ -2011,11 +2016,11 @@ h1 .accent { color: var(--accent); }
               </picture>
             </span>
             <span class="pf-title">Magician Corporate Booking Website</span>
-          </button>
+          </div>
         </li>
 
         <li class="pf-item" data-inview style="--delay:70ms">
-          <button class="pf-card" type="button" data-project="home-hero-site" aria-haspopup="dialog">
+          <div class="pf-card pf-card--static">
             <span class="pf-media">
               <picture>
                 <source srcset="projects/home-hero-site/thumb.webp" type="image/webp" />
@@ -2023,7 +2028,7 @@ h1 .accent { color: var(--accent); }
               </picture>
             </span>
             <span class="pf-title">Home Hero Maintenance</span>
-          </button>
+          </div>
         </li>
     </ul>
   </div>
