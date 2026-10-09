@@ -1078,10 +1078,17 @@ h1 .accent { color: var(--accent); }
   .brand-text { font-size: 12px; letter-spacing: .08em; }
   .hero-cta .pill { height: 46px; padding: 0 26px; }
 
-  /* Brand + three actions cannot fit a phone without the primary
-     button losing its edge. Resume is the one that goes: it is the
-     secondary action, and the same link sits in the footer CTA. */
-  .nav-actions .pill--ghost { display: none; }
+  /* Only one action fits beside the brand on a phone. Resume is the
+     one that stays: Book a call still reaches #contact by scrolling,
+     but a PDF has no other entry point on a small screen. */
+  .nav-actions .pill--solid { display: none; }
+  /* Being the only action left, it takes the primary treatment. */
+  .nav-actions .pill--ghost {
+    background: var(--accent-fill);
+    border-color: var(--accent-fill);
+    color: var(--on-accent);
+  }
+  .nav-actions .pill--ghost .pill-ico { opacity: .9; }
 }
 @media (max-width: 400px) {
   /* Below this the wordmark alone still fits; the qualifier does
